@@ -1,0 +1,24 @@
+//- Variables
+block vars
+	- var pageTitle = ' '
+
+doctype
+html
+	head
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		title=(pageTitle)
+		//- style
+		//- 	include dist/assets/styles/style.min.css
+
+	body
+
+		//- Header
+		include ../includes/header
+
+		//- Content
+		main
+			block content
+
+		//- Footer
+		include ../includes/footer
