@@ -79,13 +79,16 @@ function styles() {
 		.pipe(dest(paths.styles.dist));
 }
 
+
+
 // function watch() {
 // 	watch(paths.scripts.src, scripts);
 // 	watch(paths.styles.src, styles);
 // 	watch(paths.images.src, images);
 // }
 
-var build = series(clean, parallel(fonts, images, markup, styles, scripts));
+const dev = series(clean, series(fonts, images, markup, styles, scripts))
+const build = series(clean, parallel(fonts, images, markup, styles, scripts));
 
 
 exports.clean = clean;
@@ -96,6 +99,8 @@ exports.scripts = scripts;
 exports.styles = styles;
 
 exports.watch = watch;
+
+exports.dev = dev;
 exports.build = build;
 
-exports.default = build;
+exports.default = dev;
