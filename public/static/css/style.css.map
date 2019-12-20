@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.styl","style.css"],"names":[],"mappings":"AAAA;EACC,yBAAA;EAAA,iBAAA;CCCA","file":"style.css","sourcesContent":["body\n\tposition sticky","body {\n  position: sticky;\n}\n"]}

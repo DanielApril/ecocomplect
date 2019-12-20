@@ -1,106 +1,226 @@
-const { gulp, src, dest, watch, series, parallel } = require('gulp');
-const pug = require('gulp-pug');
-const stylus = require('gulp-stylus');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const del = require('del');
+var gulp = require('gulp'),
+	pug = require('gulp-pug'),
+	stylus = require('gulp-stylus'),
+	tinypng = require('gulp-tinypng'),
+	plumber = require('gulp-plumber'),
+	notify = require('gulp-notify'),
+	concat = require('gulp-concat'),
+	uglify = require('gulp-uglifyjs'),
+	jshint = require('gulp-jshint'),
+	sourcemaps = require('gulp-sourcemaps'),
+	cssnano = require('gulp-cssnano'),
+	autoprefixer = require('gulp-autoprefixer'),
+	browserSync = require('browser-sync'),
+	cache = require('gulp-cache'),
+	del = require('del');
 
-var paths = {
-	fonts: {
-		src: 'src/fonts/**/*.{woff,woff2}',
-		dist: 'dist/assets/fonts/'
-	},
-	images: {
-		src: 'src/img/**/*.{jpg,jpeg,png,svg,ico,webp}',
-		dist: 'dist/assets/img/'
-	},
-	markup: {
-		src: 'src/markup/pages/*.pug',
-		dist: 'dist'
-	},
-	scripts: {
-		src: 'src/js/**/*.js',
-		dist: 'dist/assets/scripts/'
-	},
-	styles: {
-		src: 'src/styles/**/*.styl',
-		dist: 'dist/assets/styles/'
-	}
+var config = {
+	devFolder: './src',
+	buildFolder: './public',
+	secondBuildFolder: '/static'
 };
 
-/* Not all tasks need to use streams, a gulpfile is just another node program
- * and you can use all packages available on npm, but it must return either a
- * Promise, a Stream or take a callback and call it
- */
-function clean() {
-	// You can use multiple globbing patterns as you would with `src`,
-	// for example if you are using del 2.0 or above, return its promise
-	return del(['assets']);
-}
 
-
-
-function fonts() {
-	return src(paths.fonts.src)
-		.pipe(dest(paths.fonts.dist))
-}
-
-function images() {
-	return src(paths.images.src)
-		.pipe(dest(paths.images.dist))
-}
-
-function markup() {
-	return src(paths.markup.src)
+//Pug
+gulp.task('pug', function () {
+	return gulp
+		.src(config.devFolder + '/markup/pages/*.pug')
+		.pipe(plumber({ errorHandler: onError }))
 		.pipe(pug({
 			pretty: true
-		}))
-		.pipe(dest(paths.markup.dist))
-}
+		}
+		))
+		.pipe(gulp.dest(config.buildFolder))
+		.on('end', browserSync.reload)
+});
 
-function scripts() {
-	return src(paths.scripts.src, { sourcemaps: true })
-		.pipe(uglify())
-		.pipe(concat('main.min.js'))
-		.pipe(dest(paths.scripts.dist));
-}
 
-function styles() {
-	return src(paths.styles.src)
+//Stylus Dev
+gulp.task('style:dev', function () {
+	return gulp
+		.src(config.devFolder + '/styles/style.styl')
+		.pipe(sourcemaps.init())
+		.pipe(plumber({ errorHandler: onError }))
 		.pipe(stylus({
-			compress: true
+			//Libs include here - 'devFolder' +'/sylus/libs.styl'
+			'include css': true
 		}))
-		// pass in options to the stream
-		.pipe(rename({
-			basename: 'style',
-			suffix: '.min'
+		.pipe(autoprefixer({
+			//3v for Flex-box
+			browsers: [
+				"> 1%",
+				"not IE 11",
+				"not OperaMini all",
+				"not dead"]
 		}))
-		.pipe(dest(paths.styles.dist));
-}
+		.pipe(sourcemaps.write('.'))
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/css/'))
+		.pipe(browserSync.reload({ stream: true }))
+});
+
+//Stylus Build
+gulp.task('style:build', function () {
+	return gulp
+		.src(config.devFolder + '/styles/style.styl')
+		.pipe(plumber({ errorHandler: onError }))
+		.pipe(stylus({
+			'include css': true
+		}))
+		.pipe(autoprefixer({
+			browsers: ['last 3 version']
+		}))
+		.pipe(cssnano())
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/css/'))
+});
 
 
+//JS Dev
+gulp.task('script:dev', function () {
+	return gulp
 
-// function watch() {
-// 	watch(paths.scripts.src, scripts);
-// 	watch(paths.styles.src, styles);
-// 	watch(paths.images.src, images);
-// }
+		//Libs here:
+		.src([
+			// EXAMPLE:
+			// './node_modules/jquery/dist/jquery.min.js',
+			config.devFolder + '/js/libs/*.js',
+			config.devFolder + '/js/main.js'
+		])
+		.pipe(plumber())
 
-const dev = series(clean, series(fonts, images, markup, styles, scripts))
-const build = series(clean, parallel(fonts, images, markup, styles, scripts));
+		/* 
+		Jshint - detects errors and potential problems in JavaScript code.
+		Errors are output in the console with syntax highlighting.
+		You can add a list of ignored files on - .jshintignore (file is hidden)
+		Also, you can comment on 2 lines below if you dont need jshint.
+		*/
+		.pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'))
+
+		.pipe(concat('main.js'))
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/js'))
+		.pipe(browserSync.reload({ stream: true }))
+});
+
+//JS Build
+gulp.task('script:build', function () {
+	return gulp
+
+		//Libs here:
+		.src([
+			// EXAMPLE:
+			// './node_modules/jquery/dist/jquery.min.js',
+			config.devFolder + '/js/libs/*.js',
+			config.devFolder + '/js/main.js'
+		])
+		.pipe(plumber())
+
+		/* 
+		Jshint - detects errors and potential problems in JavaScript code.
+		Errors are output in the console with syntax highlighting.
+		You can add a list of ignored files on - .jshintignore (file is hidden)
+		Also, you can comment on 2 lines below if you dont need jshint.
+		*/
+		.pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'))
+
+		.pipe(concat('main.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/js'))
+});
 
 
-exports.clean = clean;
-exports.fonts = fonts;
-exports.images = images;
-exports.markup = markup;
-exports.scripts = scripts;
-exports.styles = styles;
+//Img Develop
+gulp.task('img:dev', function () {
+	return gulp
+		.src(config.devFolder + '/img/**/*.{jpg,gif,png,svg,ico}')
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/img'));
 
-exports.watch = watch;
+});
 
-exports.dev = dev;
-exports.build = build;
+//Img Build
+gulp.task('img:build', function () {
+	return gulp
+		.src(config.devFolder + '/img/**/*.{jpg,gif,png,svg,ico}')
 
-exports.default = dev;
+		/* 
+		Go to https://tinypng.com/developers
+		Replace 'YOU_API_KEY' in your API
+		*/
+		.pipe(tinypng('BKwyQB5YzfkoUueMTYI8gwRzRCZSfgKG'))
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/img'));
+
+});
+
+
+//Fonts
+gulp.task('fonts', function () {
+	return gulp
+		.src(config.devFolder + '/fonts/**/*.*')
+		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/fonts'));
+
+});
+
+
+//Other Files
+gulp.task('other', function () {
+	return gulp
+		.src([
+			config.devFolder + '/.htaccess',
+			config.devFolder + '/*.{txt,xml}'
+		])
+		.pipe(gulp.dest(config.buildFolder));
+
+});
+
+
+//Clean buildFolder
+gulp.task('clean', function () {
+	return del.sync(config.buildFolder)
+});
+
+
+//Watch
+gulp.task('watch', function () {
+	gulp.watch(config.devFolder + '/fonts/**/*.[woff,woff2]', ['fonts']);
+	gulp.watch(config.devFolder + '/markup/**/*.pug', ['pug']);
+	gulp.watch(config.devFolder + '/styles/**/*.styl', ['style:dev']);
+	gulp.watch(config.devFolder + '/js/**/*.js', ['script:dev']);
+	gulp.watch(config.devFolder + '/img/**/*.img', ['img:dev']);
+});
+
+
+//Server
+gulp.task('serve', function () {
+	browserSync({
+		server: {
+			baseDir: config.buildFolder
+		},
+		// port: 8080,
+		// open: true,
+		notify: false
+	})
+});
+
+
+//MAIN TASK
+
+//gulp
+gulp.task('default', ['clean', 'pug', 'style:dev', 'script:dev', 'fonts', 'img:dev', 'other', 'watch', 'serve']);
+
+//build
+gulp.task('build', ['clean', 'style:build', 'script:build', 'pug', 'fonts', 'img:build', 'other']);
+
+//cache
+gulp.task('cache', function () {
+	return cache.clearAll();
+});
+
+
+//Error Message
+var onError = function (err) {
+	notify.onError({
+		title: "Error in " + err.plugin,
+		message: err.message
+	})(err);
+	this.emit('end');
+};
