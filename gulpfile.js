@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 
 var config = {
 	devFolder: './src',
-	buildFolder: './public',
+	buildFolder: './docs',
 	secondBuildFolder: '/static'
 };
 

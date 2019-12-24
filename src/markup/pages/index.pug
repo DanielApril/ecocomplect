@@ -4,18 +4,25 @@ block vars
 	- var pageTitle = 'Index page'
 
 block content
-	section.section.first-section._dark._lg
+	section.section._first-section._dark._lg
 		.container.flex._vertical
 			h1 Фахверк Домогацкого
 			h3 Сверхтеплые, недорогие, экологичные дома заводского производства
 			
 			.flex._center
-				div One 65
-				div 2 этажа
-				div 341 кв.м
-				div 21 окно
+				.props
+					.props__item._title One 65
+					.props__item
+						.props__value 3
+						.props__desc спальни
+					.props__item
+						.props__value 341
+						.props__desc кв.м.
+					.props__item
+						.props__value 2
+						.props__desc 2 этажа
 
-	section.section.socials._light._stretch
+	section.section._socials._light._stretch
 		.container._fluid
 			.row
 				.col-4
@@ -33,3 +40,219 @@ block content
 						.social__icon 3
 						.social__amount 120064
 						.social__name VK
+
+	section.section._new-house._lg
+		.container._fluid
+			.section__half._swiper
+			.section__half-inner
+				h2.section__title Новый дом — ONE 62
+				.props
+					.props__item
+						.props__value 3
+						.props__desc спальни
+					.props__item
+						.props__value 341
+						.props__desc кв.м.
+					.props__item
+						.props__value 2
+						.props__desc 2 этажа
+				p Даже среди специалистов мало кто верил, что можно сделать малоэтажный дом с классом энергоэффективности, А++ (максимальный класс по СП 50.13330.2012 Тепловая защита зданий).
+				button.button._outline(type="button") Подробнее
+
+	section.section._review._light
+		.container._fluid
+			.section__half
+				.section__half-inner
+					h2.section__title «Именно то, что я искал»
+					p Я очень доволен нашим сотрудничеством. Дом получился намного лучше, чем я мог себе представить. Очень скоро обращусь еще за одним для родителей.
+					p — Евгений Иванов
+			.section__half._img
+
+	section.section._lg
+		.container
+			.row
+				.col-4
+					.img-cover
+						img(src="", alt="")
+					h5 Лучшее соотношение цена/качество
+					p Энергоэффективность — благодаря использованию энергоэффективных материалов вы будете экономить значительные деньги на отоплении. Дом можно отапливать даже электричеством. Надежность — Дома по технологии Фахверк в Северной Европе эксплуатируются по 300–500 лет и в них все еще живут люди. Гарантия на наши дома 25 лет.
+				.col-4
+					.img-cover
+						img(src="", alt="")
+					h5 Экологически чистые материалы
+					p Все материалы которые используются для строительства и отделки наших домов проверяем при помощи газового анализатора. Не допускаем использование вредных и ядовитых материалов.
+				.col-4
+					.img-cover
+						img(src="", alt="")
+					h5 Заводское производство и серийность
+					p За счет заводского производства и использования только серийных проектов мы добились самой быстрой скорости строительства и, соответственно, лучшей цены. Благодаря тому, что все наши проекты являются типовыми, каждый проект максимально продуман и оптимизирован. Все проекты имеют полный пакет технической документации и теплотехнические расчеты.
+			.flex._center
+				button.button._outline(type="button") Подробнее
+
+	section.section._slider._lg
+		.container._fluid
+			.swiper-container SLIIIDER
+
+	section.section._lg
+		.container._fluid
+			.section__half._img
+			.section__half
+				.section__half-inner
+					h2.section__title Технология строительства
+					p По результатам теплорасчетов дом Берген-Опти в комплектации А++ имеет расход на отопление электричеством 22000 р. в год (при отоплении напольными конвекторами).
+					p Даже среди специалистов мало кто верил, что можно сделать малоэтажный дом с классом энергоэффективности, А++ (максимальный класс по СП 50.13330.2012 Тепловая защита зданий).
+
+					button.button._primary(type="button") Подробнее
+
+	section.section._lg
+		.container._fluid
+			.section__half
+				.section__half-inner
+					h2.section__title Конструктив
+					p Качественный клееный брус с обработкой на немецкой производственной линии Хендеггер К2.
+
+					button.button._primary(type="button") Подробнее
+			.section__half._img
+
+	section.section._lg
+		.container._fluid
+			.section__half._img
+			.section__half
+				.section__half-inner
+					h2.section__title Инновационные стеклопакеты
+					p Все наши дома имеют сверхтеплые стеклопакеты. Эти стеклопакеты экономят энергию и практически не выпускают тепло зимой.
+
+					button.button._primary(type="button") Подробнее
+
+	section.section._dark
+		.container._fluid
+			.section__half._img
+			.section__half
+				.section__half-inner
+					h2.section__title Космический утеплитель
+					p Несмотря на большие площади остекления, наши домокомплекты в 4 раза теплее кирпичных домов. Это возможно благодаря современным строительным материалам, лучшему в мире утеплителю PIR и специальным теплым стеклопакетам.
+
+					button.button._white(type="button") Подробнее
+
+	section.section._lg
+		.container
+			h2.section__title Сверхтеплые Дома
+			p Объединив энергоэффективные стеклопакеты, качественный клееный брус и лучший в мире утеплитель мы добились самого высокого уровня энергоэффективности
+			.video
+				iframe(src="", frameborder="0")
+			.flex._center
+				button.button._primary(type="button") Подробнее
+
+	section.section._dark._lg
+		.container._fluid
+			h2.section__title Основатель — Сергей Домогацкий
+			ul._dash
+				li — Известный писатель, автор 6-ти книг (3 из которых стали бестселлерами);
+				li — Предприниматель с 17-летним стажем;
+				li — Блогер. Совокупное число подписчиков более 500 000.
+
+	section.section._dark
+		.container._fluid
+			.section__half._img
+			.section__half
+				.section__half-inner
+					h2.section__title Поселки, базы отдыха, санатории
+					p Наши дома идеально подходят для продажи или сдачи в аренду. За счет своего потрясающего внешнего вида они имеют высокую ликвидность и ваши инвестиции окупятся очень быстро.
+
+					button.button._light(type="button") Подробнее
+
+	section.section._projects
+		.container._fluid
+			h2.section__title Проекты и цены
+			.row
+				.col-4
+					.preview
+						.preview__top
+							.preview__name Omega
+							.preview__price ₽ 5000000
+							.preview__desc Загородный дом для молодой семьи
+						.preview__img
+							img(src="", alt="")
+						.preview__props.props
+							.props__item
+								.props__value 3
+								.props__desc спальни
+							.props__item
+								.props__value 341
+								.props__desc кв.м.
+							.props__item
+								.props__value 2
+								.props__desc 2 этажа
+						.preview__about
+							.preview__about-left
+								p 300 кв.м
+								p Общая площадь
+								p 380 кв.м
+								p с террасой
+								p 240 кв.м
+								p с закрытым вторым светом
+							.preview__about-right
+								h5 Опции:
+								ul._check
+									li Модульный
+									li Теплый
+									li Твой
+
+	section.section._reviews._light._lg
+		.container._fluid
+			.swiper-container Slider review
+
+	section.section._review._light
+		.container._fluid
+			.section__half
+				.section__half-inner
+					h2.section__title «Именно то, что я искал»
+					p Я очень доволен нашим сотрудничеством. Дом получился намного лучше, чем я мог себе представить. Очень скоро обращусь еще за одним для родителей.
+					p — Евгений Иванов
+			.section__half._img
+
+	section.section._lg
+		.container._fluid
+			h2.section__title Выставочные дома
+			.swiper-container
+
+	section.section._dark
+		.container._fluid
+			.section__half._map
+				.section__half-inner
+					h2.section__title Главный выставочный дом в Москве
+					p Район Мега Белая Дача.
+					p Комплекс «Малоэтажная страна»
+					p Дзержинское ш., 7/7, Котельники, Московская обл.
+					p Ежедневно с 10:00 до 20:00
+
+	footer.footer
+		.container
+			.flex._top
+				div
+					div Разделы сайта
+					ul
+						li Главная
+						li Технология строительства
+						li Космический утеплитель
+						li Дома и цены
+						li 3D тур
+						li Отзывы
+						li Сверхтеплые дома
+						li Преимущества
+						li Галерея домов
+						li Инновационные стеклопакеты
+						li Основатель
+						li Выставочные дома
+				div
+					div Категории домов
+					ul
+						li Alpha
+						li Mini
+						li Opti
+						li Midi
+						li Maxi
+						li Omega
+						li Гостевой дом
+						li Баня
+						li Гараж
