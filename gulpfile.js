@@ -141,11 +141,6 @@ gulp.task('img:dev', function () {
 gulp.task('img:build', function () {
 	return gulp
 		.src(config.devFolder + '/img/**/*.{jpg,gif,png,svg,ico}')
-
-		/* 
-		Go to https://tinypng.com/developers
-		Replace 'YOU_API_KEY' in your API
-		*/
 		.pipe(tinypng('BKwyQB5YzfkoUueMTYI8gwRzRCZSfgKG'))
 		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/img'));
 

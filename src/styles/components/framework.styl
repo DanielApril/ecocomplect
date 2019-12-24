@@ -1,0 +1,82 @@
+@require '../_vars'
+
+.flex
+	display flex
+
+	&:not(._vertical)
+		&._center
+			&:not(._top):not(._bottom)
+				align-items center
+
+			&:not(._left):not(._right)
+				justify-content center
+
+		&._top
+			align-items flex-start
+
+		&._bottom
+			align-items flex-end
+
+		&._right
+			justify-content flex-end
+
+		&._left
+			justify-content flex-start
+
+		&._stretch
+			align-items stretch
+			width 100%
+
+		p
+		.paragraph
+			& + p
+				margin-top 0
+
+	&._vertical
+		flex-direction column
+
+		& > *
+			flex-shrink 0
+
+		&._center
+			&:not(._top):not(._bottom)
+				justify-content center
+
+			&:not(._left):not(._right)
+				align-items center
+
+		&._top
+			justify-content flex-start
+
+		&._bottom
+			justify-content flex-end
+
+		&._right
+			align-items flex-end
+
+		&._left
+			align-items flex-start
+
+	.flex__auto
+		margin auto
+
+	for $_i in range(4px, 80px, 4)
+		&.flex-g{$_i}
+			& > *:not(:last-child)
+				margin-right $_i
+
+	&._wrap
+		flex-wrap wrap
+
+.no-shrink
+	flex-shrink 0
+
+.shrink
+	flex-shrink 1
+	min-width 0
+
+.no-grow
+	flex-grow 0
+
+.grow
+	flex-grow 1

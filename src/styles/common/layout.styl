@@ -1,0 +1,35 @@
+@require '../_vars'
+
+.section
+	display flex
+	justify-content center
+	align-items stretch
+	min-height 400px
+
+	&._dark
+		background-color $cl-grey-3
+		color $cl-white
+
+	&._light
+		background-color $cl-grey-5
+
+	&._lg
+		min-height 800px
+
+.section__half
+	display flex
+	justify-content center
+	align-items center
+	padding 20px
+
+.container
+	display flex
+	justify-content center
+	align-items center
+	margin 0 auto
+	max-width 1160px
+	width 100%
+	min-height 100%
+
+	&._fluid
+		max-width 100%
