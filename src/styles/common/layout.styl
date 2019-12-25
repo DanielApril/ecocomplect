@@ -1,5 +1,11 @@
 @require '../_vars'
 
+body
+	overflow-x hidden
+
+	@supports (overflow-y overlay)
+		overflow-y overlay
+
 .section
 	display flex
 	justify-content center
@@ -15,6 +21,10 @@
 
 	&._lg
 		min-height 800px
+
+	&._first-section
+		.h3
+			text-align center
 
 .section__half
 	display flex

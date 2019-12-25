@@ -1,5 +1,7 @@
 @require '../_vars'
 
+// FLEX
+// -----------------------------------------------
 .flex
 	display flex
 
@@ -80,3 +82,84 @@
 
 .grow
 	flex-grow 1
+
+// Atomic offsets
+// -----------------------------------------------
+$grid-cell			= 4
+
+.mt-auto
+	margin-top auto !important
+.mr-auto
+	margin-right auto !important
+.mb-auto
+	margin-bottom auto !important
+.ml-auto
+	margin-left auto !important
+
+.my-auto
+	margin-top auto !important
+	margin-bottom auto !important
+.mx-auto
+	margin-right auto !important
+	margin-left auto !important
+
+
+for $_i in range(0, 15, 1)
+	// Margin
+	.m{$_i}x
+		margin ($_i * $grid-cell)px !important
+	.mx{$_i}x
+		margin-right ($_i * $grid-cell)px !important
+		margin-left ($_i * $grid-cell)px !important
+	.my{$_i}x
+		margin-top ($_i * $grid-cell)px !important
+		margin-bottom ($_i * $grid-cell)px !important
+	.mt{$_i}x
+		margin-top ($_i * $grid-cell)px !important
+	.mr{$_i}x
+		margin-right ($_i * $grid-cell)px !important
+	.mb{$_i}x
+		margin-bottom ($_i * $grid-cell)px !important
+	.ml{$_i}x
+		margin-left ($_i * $grid-cell)px !important
+
+	// Padding
+	.p{$_i}x
+		padding ($_i * $grid-cell)px !important
+	.px{$_i}x
+		padding-right ($_i * $grid-cell)px !important
+		padding-left ($_i * $grid-cell)px !important
+	.py{$_i}x
+		padding-top ($_i * $grid-cell)px !important
+		padding-bottom ($_i * $grid-cell)px !important
+	.pt{$_i}x
+		padding-top ($_i * $grid-cell)px !important
+	.pr{$_i}x
+		padding-right ($_i * $grid-cell)px !important
+	.pb{$_i}x
+		padding-bottom ($_i * $grid-cell)px !important
+	.pl{$_i}x
+		padding-left ($_i * $grid-cell)px !important
+
+
+
+// TYPOGRAPHY
+// -----------------------------------------------
+.ta-l
+	text-align left
+.ta-c
+	text-align center
+.ta-r
+	text-align right
+.ta-j
+	text-align justify
+
+.break-word
+	overflow-wrap break-word
+	word-wrap break-word
+
+.caps
+	text-transform uppercase
+
+.nowrap
+	@extend $style-overflow-ellipsis
