@@ -1,1 +1,39 @@
 @require '../_vars'
+
+.button
+	display inline-flex
+	justify-content center
+	align-items center
+	text-align center
+	padding 0 12px
+	min-width 180px
+	height 46px
+	line-height 14px
+	letter-spacing .05em
+	text-transform uppercase
+	font-family $ff-promo
+	font-weight 500
+	font-size 14px
+	color $cl-grey-2
+	background-color transparent
+	border-width 2px
+	border-style solid
+	border-color transparent
+
+	&._outline
+		border-color $cl-grey-2
+
+	&._primary
+		color $cl-white
+		background-color $cl-grey-2
+		border-color @background-color
+
+	&._light
+		color $cl-white
+		background-color $cl-grey-3
+		border-color @background-color
+
+	&._white
+		color $cl-grey-1
+		background-color $cl-white
+		border-color @background-color

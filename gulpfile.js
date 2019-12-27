@@ -82,7 +82,8 @@ gulp.task('script:dev', function () {
 		.src([
 			// EXAMPLE:
 			// './node_modules/jquery/dist/jquery.min.js',
-			config.devFolder + '/js/libs/*.js',
+			// './node_modules/swiper/js/swiper.min.js',
+			// './node_modules/jquery/dist/jquery.min.js',
 			config.devFolder + '/js/main.js'
 		])
 		.pipe(plumber())
@@ -109,7 +110,8 @@ gulp.task('script:build', function () {
 		.src([
 			// EXAMPLE:
 			// './node_modules/jquery/dist/jquery.min.js',
-			config.devFolder + '/js/libs/*.js',
+			// './node_modules/swiper/js/swiper.min.js',
+			// './node_modules/jquery/dist/jquery.min.js',
 			config.devFolder + '/js/main.js'
 		])
 		.pipe(plumber())

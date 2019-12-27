@@ -5,3 +5,105 @@
 
 *
 	box-sizing border-box
+
+.swiper-button-prev
+.swiper-button-next
+	display flex
+	justify-content center
+	align-items center
+	margin-top 0
+	width 80px
+	height 80px
+	font-size 52px
+	background-color $cl-grey-2-07
+	color $cl-white
+	transition .2s background-color ease
+
+	&._light
+		background-color $cl-grey-4-06
+		color $cl-grey-1
+
+		&:hover
+			background-color $cl-grey-4
+
+	&:hover
+		background-color $cl-grey-2
+
+
+	&::after
+		content ''
+
+
+.swiper-button-prev
+	left 0
+
+.swiper-button-next
+	right 0
+
+.swiper-container-horizontal
+	& > .swiper-pagination-bullets
+		.swiper-pagination-bullet
+			&:not(:last-child)
+				margin 0 32px 0 0
+
+.swiper-pagination
+	bottom 40px
+
+	.swiper-pagination-bullet
+		width 12px
+		height @width
+		background transparent
+		border 1px solid $cl-white
+		opacity 1
+
+	.swiper-pagination-bullet-active
+		background $cl-white
+
+
+.first-screen-slider
+	padding-bottom 80px
+
+.props
+	display flex
+	justify-content center
+	align-items center
+
+	&._lg
+		.props__item
+			min-height 80px
+		.props__value
+			@extend $text-section-title
+
+	&._light
+		color $cl-white
+
+		.props__desc
+			color $cl-white
+
+	&._left
+		justify-content flex-start
+
+.props__item
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
+	padding 12px
+	min-width 120px
+	min-height 60px
+
+	&._title
+		@extend $text-section-title
+		padding-right 40px
+
+	&:not(:last-child)
+		border-right-width 1px
+		border-right-style solid
+		border-right-color $cl-grey-4
+
+.props__value
+	@extend $text-benefit-title
+
+.props__desc
+	@extend $text-benefit-desc
+	color $cl-grey-3

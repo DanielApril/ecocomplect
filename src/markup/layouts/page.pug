@@ -2,6 +2,8 @@
 block vars
 	- var pageTitle = ' '
 
+include ../includes/mixins
+
 doctype
 html
 	head
@@ -18,3 +20,8 @@ html
 		//- Content
 		main
 			block content
+
+		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
+		script(src="https://unpkg.com/swiper/js/swiper.min.js")
+
+		script(src='static/js/main.js')

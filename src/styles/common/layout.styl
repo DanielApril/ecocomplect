@@ -3,8 +3,8 @@
 body
 	overflow-x hidden
 
-	@supports (overflow-y overlay)
-		overflow-y overlay
+	// @supports (overflow-y overlay)
+	// 	overflow-y overlay
 
 .section
 	display flex
@@ -26,17 +26,47 @@ body
 		.h3
 			text-align center
 
+	&._socials
+		.social
+			display flex
+			flex-direction column
+			justify-content center
+			align-items center
+
+		.social__icon
+			margin-bottom 4px
+
+		.social__amount
+			@extend $text-h1
+
+		.social__name
+			@extend $text-sm
+			margin-top 6px
+			color $cl-grey-3
+
 .section__half
 	display flex
 	justify-content center
 	align-items center
+	flex-shrink 0
 	padding 20px
+	width 50%
 
 	&._img
 		@extend $style-bg-cover
 
 	&._slider
 		display block
+
+	.section__title
+		margin-bottom 36px
+
+	.section__desc
+		@extend $text-lg
+		color $cl-grey-3
+
+	.section__action
+		margin-top 36px
 
 .section__half-inner
 	display block

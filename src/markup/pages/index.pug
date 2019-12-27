@@ -5,43 +5,8 @@ block vars
 
 block content
 	include ../sections/index-first-section
-
-	section.section._socials._light._stretch
-		.container._fluid
-			.row
-				.col-4
-					.flex._vertical._center.social
-						.social__icon 1
-						.social__amount 145000
-						.social__name Youtube
-				.col-4
-					.flex._vertical._center.social
-						.social__icon 2
-						.social__amount 275000
-						.social__name Instagram
-				.col-4
-					.flex._vertical._center.social
-						.social__icon 3
-						.social__amount 120064
-						.social__name VK
-
-	section.section._new-house._lg
-		.container._fluid
-			.section__half._swiper
-			.section__half-inner
-				h2.section__title Новый дом — ONE 62
-				.props
-					.props__item
-						.props__value 3
-						.props__desc спальни
-					.props__item
-						.props__value 341
-						.props__desc кв.м.
-					.props__item
-						.props__value 2
-						.props__desc 2 этажа
-				p Даже среди специалистов мало кто верил, что можно сделать малоэтажный дом с классом энергоэффективности, А++ (максимальный класс по СП 50.13330.2012 Тепловая защита зданий).
-				button.button._outline(type="button") Подробнее
+	include ../sections/index-socials-section
+	include ../sections/index-new-house-section
 
 	section.section._review._light
 		.container._fluid
@@ -71,7 +36,7 @@ block content
 					h5.h5 Заводское производство и серийность
 					p За счет заводского производства и использования только серийных проектов мы добились самой быстрой скорости строительства и, соответственно, лучшей цены. Благодаря тому, что все наши проекты являются типовыми, каждый проект максимально продуман и оптимизирован. Все проекты имеют полный пакет технической документации и теплотехнические расчеты.
 			.flex._center
-				button.button._outline(type="button") Подробнее
+				button.button._outline.section__action(type="button") Подробнее
 
 	section.section._slider._lg
 		.container._fluid
@@ -86,7 +51,7 @@ block content
 					p По результатам теплорасчетов дом Берген-Опти в комплектации А++ имеет расход на отопление электричеством 22000 р. в год (при отоплении напольными конвекторами).
 					p Даже среди специалистов мало кто верил, что можно сделать малоэтажный дом с классом энергоэффективности, А++ (максимальный класс по СП 50.13330.2012 Тепловая защита зданий).
 
-					button.button._primary(type="button") Подробнее
+					button.button._primary.section__action(type="button") Подробнее
 
 	section.section._lg
 		.container._fluid
@@ -95,7 +60,7 @@ block content
 					h2.section__title Конструктив
 					p Качественный клееный брус с обработкой на немецкой производственной линии Хендеггер К2.
 
-					button.button._primary(type="button") Подробнее
+					button.button._primary.section__action(type="button") Подробнее
 			.section__half._img
 
 	section.section._lg
@@ -106,7 +71,7 @@ block content
 					h2.section__title Инновационные стеклопакеты
 					p Все наши дома имеют сверхтеплые стеклопакеты. Эти стеклопакеты экономят энергию и практически не выпускают тепло зимой.
 
-					button.button._primary(type="button") Подробнее
+					button.button._primary.section__action(type="button") Подробнее
 
 	section.section._dark
 		.container._fluid
@@ -116,7 +81,7 @@ block content
 					h2.section__title Космический утеплитель
 					p Несмотря на большие площади остекления, наши домокомплекты в 4 раза теплее кирпичных домов. Это возможно благодаря современным строительным материалам, лучшему в мире утеплителю PIR и специальным теплым стеклопакетам.
 
-					button.button._white(type="button") Подробнее
+					button.button._white.section__action(type="button") Подробнее
 
 	section.section._lg
 		.container
@@ -125,7 +90,7 @@ block content
 			.video
 				iframe(src="", frameborder="0")
 			.flex._center
-				button.button._primary(type="button") Подробнее
+				button.button._primary.section__action(type="button") Подробнее
 
 	section.section._dark._lg
 		.container._fluid
@@ -143,7 +108,7 @@ block content
 					h2.section__title Поселки, базы отдыха, санатории
 					p Наши дома идеально подходят для продажи или сдачи в аренду. За счет своего потрясающего внешнего вида они имеют высокую ликвидность и ваши инвестиции окупятся очень быстро.
 
-					button.button._light(type="button") Подробнее
+					button.button._light.section__action(type="button") Подробнее
 
 	section.section._projects
 		.container._fluid
