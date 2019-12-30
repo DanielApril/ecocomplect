@@ -110,3 +110,83 @@ $style-overflow-ellipsis
 	overflow-x hidden
 	text-overflow ellipsis
 	white-space nowrap
+
+$style-img-resp
+	display block
+	max-width 100%
+	height auto
+
+$style-dummy
+	background rgb(63,32,215)
+	background linear-gradient(45deg, rgba(63,32,215,1) 0%, rgba(221,67,67,1) 100%)
+
+
+$mb-mobile-sm			= 340px		// < 340
+$mb-mobile-md			= 400px		// > 340 < 400
+$mb-mobile-lg			= 600px		// > 400 < 600
+
+$mb-tablet-portrait		= 900px		// > 600 < 900
+$mb-tablet-landscape	= 1200px	// < 1200
+
+$mb-desktop-sm			= 1300px	// > 1200 < 1300
+$mb-desktop-md			= 1600px	// > 1300 < 1600
+$mb-desktop-lg			= $mb-desktop-md + 1 // 1600
+
+
+$media-queries = {
+	mobile				: 'only screen and (max-width '+	$mb-mobile-lg				+')',
+	mobile-sm			: 'only screen and (max-width '+	$mb-mobile-sm				+')',
+	mobile-md			: 'only screen and (min-width '+	($mb-mobile-sm+1)			+') and (max-width '+	$mb-mobile-md			+')',
+	mobile-lg			: 'only screen and (min-width '+	($mb-mobile-md+1)			+') and (max-width '+	$mb-mobile-lg			+')',
+
+	tablet				: 'only screen and (min-width '+	($mb-mobile-lg+1)			+') and (max-width '+	$mb-tablet-landscape	+')',
+	tablet-sm			: 'only screen and (min-width '+	($mb-mobile-lg+1)			+') and (max-width '+	$mb-tablet-portrait		+')',
+	tablet-lg			: 'only screen and (min-width '+	($mb-tablet-portrait+1)		+') and (max-width '+	$mb-tablet-landscape	+')',
+
+	desktop				: 'only screen and (min-width '+	($mb-tablet-landscape+1)	+')',
+	desktop-sm			: 'only screen and (min-width '+	($mb-tablet-landscape+1)	+') and (max-width '+	$mb-desktop-sm			+')',
+	desktop-md			: 'only screen and (min-width '+	($mb-desktop-sm+1)			+') and (max-width '+	$mb-desktop-md			+')',
+	desktop-lg			: 'only screen and (min-width '+	($mb-desktop-lg)			+')'
+}
+
+$media-prefixes = {
+	mobile				: 'm',
+	mobile-sm			: 'm-s',
+	mobile-md			: 'm-m',
+	mobile-lg			: 'm-l',
+
+	tablet				: 't',
+	tablet-sm			: 't-s',
+	tablet-lg			: 't-l',
+
+	desktop				: 'd',
+	desktop-sm			: 'd-s',
+	desktop-md			: 'd-m',
+	desktop-lg			: 'd-l'
+}
+
+// MIXIN FOR USE MEDIA QUERIES
+// -----------------------------------------------
+/*
+	Example with one breakpoint:
+		+media(mobile)
+			[css properties must be here]
+
+	Example with multiple breakpoints (separated with a space):
+		+media(mobile tablet)
+			[css properties must be here]
+
+	Available mixin values (breakpoints) see in vars-mediabreakpoints.styl
+*/
+media(breakpoints)
+	conditions = ()
+
+	for breakpoint in breakpoints
+		// Checking existence of breakpoint
+		error('Incorrect breakpoint! (' + breakpoint +')') if ($media-queries[breakpoint] == null)
+		push(conditions, $media-queries[breakpoint])
+
+	conditions = join(', ', conditions)
+
+	@media conditions
+		{block}

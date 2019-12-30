@@ -1,0 +1,143 @@
+@require '../_vars'
+
+.section
+	&._first-section
+		.h3
+			text-align center
+
+	&._socials
+		.row
+			height 100%
+
+		.social
+			display flex
+			flex-direction column
+			justify-content center
+			align-items center
+			height 100%
+
+			&._in
+				background-color $cl-grey-4
+
+		.social__icon
+			margin-bottom 4px
+
+		.social__amount
+			@extend $text-h1
+
+		.social__name
+			@extend $text-sm
+			margin-top 6px
+			color $cl-grey-3
+
+	&._benefits
+		.benefit
+			text-align center
+
+			+media(mobile)
+				text-align left
+
+		.benefit__img
+			margin 44px auto
+			width 120px
+			height 60px
+			background-color $cl-grey-5
+			border 1px solid $cl-grey-4
+			border-radius 4px
+
+		.benefit__desc
+			@extend $text
+			margin-top 24px
+			color $cl-grey-3
+
+.warm-house
+	text-align center
+
+.creator
+	display flex
+	flex-direction column
+	align-items flex-end
+	margin auto 160px 120px auto
+	text-align right
+
+.projects
+	display flex
+	flex-direction column
+	align-items stretch
+	width 100%
+	text-align center
+
+.projects__list
+	margin 48px 20px
+
+.preview
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items stretch
+	text-align left
+	border-radius 4px
+	box-shadow $shadow
+
+.preview__top
+.preview__img
+.preview__props
+.preview__about
+	display flex
+	justify-content flex-start
+	width 100%
+
+.preview__top
+	flex-wrap wrap
+	padding 32px 24px
+
+.preview__name
+	flex-grow 1
+
+.preview__price
+	flex-shrink 0
+
+.preview__name
+.preview__price
+	@extend $text-project-title
+
+.preview__desc
+	@extend $text-sm
+	margin-top 4px
+	width 100%
+	color $cl-grey-3
+
+.preview__img
+	@extend $style-dummy
+	height 268px
+
+.preview__props
+	padding 16px 24px 8px
+
+.preview__about
+	padding 8px 24px 32px
+
+.preview__about-left
+.preview__about-right
+	width 50%
+
+.preview__about-left
+	display flex
+	flex-direction column
+	margin-right 20px
+
+.preview__about-value
+	line-height 20px
+	font-family $ff-promo
+	font-weight 600
+	font-size 14px
+	color $cl-grey-1
+
+	&:not(:first-child)
+		margin-top 12px
+
+.preview__about-desc
+	text-transform lowercase
+	line-height 10px
+	font-size 10px
+	color $cl-grey-3
