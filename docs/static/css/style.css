@@ -86,6 +86,15 @@
   line-height: 14px;
   font-size: 14px;
 }
+.video embed,
+.video iframe,
+.video object {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 .section__half._img {
   background-repeat: no-repeat;
   background-size: cover;
@@ -97,7 +106,8 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.img-responsive {
+.img-responsive,
+.review__img {
   display: block;
   max-width: 100%;
   height: auto;
@@ -105,7 +115,8 @@
 .section__half._img:not([style]),
 .section__half._slider:not([style]),
 .fullpage-slider .swiper-slide,
-.preview__img {
+.preview__img,
+.review__img {
   background: #3f20d7;
   background: linear-gradient(45deg, #3f20d7 0%, #dd4343 100%);
 }
@@ -3258,11 +3269,13 @@ body {
   margin-top: 36px;
 }
 .section__half-inner {
+  padding: 80px 0;
   max-width: 80%;
   min-width: 465px;
 }
 @media only screen and (max-width: 600px) {
   .section__half-inner {
+    padding: 0;
     max-width: 100%;
     min-width: 100%;
   }
@@ -4439,6 +4452,25 @@ ul._right li {
 }
 .caps {
   text-transform: uppercase;
+}
+.video {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.video::before {
+  content: '';
+  display: block;
+  padding-bottom: 56.25%;
+}
+.video embed,
+.video iframe,
+.video object {
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 .row {
   display: flex;
@@ -5967,6 +5999,7 @@ ul._right li {
   height: 268px;
 }
 .preview__props {
+  justify-content: center;
   padding: 16px 24px 8px;
 }
 .preview__about {
@@ -5996,6 +6029,40 @@ ul._right li {
   line-height: 10px;
   font-size: 10px;
   color: #808080;
+}
+.reviews {
+  text-align: center;
+  width: 100%;
+}
+.reviews-slider {
+  margin-top: 36px;
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  margin-bottom: 20px;
+  width: 520px;
+  height: 520px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px 0 rgba(34,34,34,0.25);
+}
+.review__img {
+  flex-grow: 1;
+  color: #fff;
+}
+.review__title {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 160px;
+  line-height: 32px;
+  font-family: Montserrat, sans-serif;
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=style.css.map */

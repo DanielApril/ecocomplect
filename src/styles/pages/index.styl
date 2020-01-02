@@ -112,6 +112,7 @@
 	height 268px
 
 .preview__props
+	justify-content center
 	padding 16px 24px 8px
 
 .preview__about
@@ -141,3 +142,39 @@
 	line-height 10px
 	font-size 10px
 	color $cl-grey-3
+
+.reviews
+	text-align center
+	width 100%
+
+.reviews-slider
+	margin-top 36px
+
+.review
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items stretch
+	margin-bottom 20px
+	width 520px
+	height @width
+	overflow hidden
+	border-radius 4px
+	box-shadow $shadow
+
+.review__img
+	flex-grow 1
+	@extend $style-img-resp
+	@extend $style-dummy
+	color $cl-white
+
+.review__title
+	display flex
+	flex-shrink 0
+	justify-content center
+	align-items center
+	text-align center
+	height 160px
+	line-height 32px
+	font-family $ff-promo
+	font-size 24px
