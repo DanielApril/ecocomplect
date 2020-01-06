@@ -55,6 +55,15 @@ body
 		&:not([style])
 			@extend $style-dummy
 
+	&._map
+		padding 0
+		align-items stretch
+
+		iframe
+			display block
+			width 100%
+			min-height 100%
+
 	.section__title
 		margin-bottom 36px
 
@@ -93,3 +102,52 @@ body
 
 	&._clean
 		padding 0
+
+
+.footer
+	padding 80px 0 120px
+	background-color $cl-grey-1
+	color $cl-white
+
+.footer__title
+	display block
+	margin-bottom 24px
+	text-transform uppercase
+	line-height 16px
+	font-family $ff-promo
+	font-weight 700
+	font-size 14px
+	color $cl-grey-3
+
+.footer__list
+	& + .footer__list
+		margin-left 160px
+
+		+media(mobile)
+			margin-right 0
+
+	li
+		@extend $text-navitem
+		text-transform uppercase
+
+		&:not(:last-child)
+			margin-bottom 16px
+
+.footer__list-inner
+	columns 2
+	column-gap 12px
+
+.footer__data
+.footer__policy
+	display flex
+	flex-direction column
+	color $cl-grey-3
+
+.footer__policy
+	margin-left 200px
+
+	a
+		color $cl-grey-3
+	
+	+media(mobile)
+		margin-left 0

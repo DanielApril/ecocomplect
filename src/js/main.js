@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+	const slideGutter = 32;
+
 	var firstScreenSlider = new Swiper('.first-screen-slider', {
 		loop: true,
 		navigation: {
@@ -27,19 +29,53 @@ $(document).ready(function () {
 			prevEl: '.swiper-button-prev',
 		},
 		slidesPerView: 'auto',
-		spaceBetween: 40
+		spaceBetween: slideGutter
 
 	});
 
 
-	var reviewSlider = new Swiper('.reviews-slider', {
+	var reviewsSlider = new Swiper('.reviews-slider', {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		slidesPerView: 'auto',
-		centeredSlides: true,
-		spaceBetween: 32
+		// centeredSlides: true,
+		spaceBetween: slideGutter,
+
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 2,
+			},
+			900: {
+				slidesPerView: 3
+			}
+		}
+
+	});
+
+
+	var showroomsSlider = new Swiper('.showrooms-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		// centeredSlides: true,
+		spaceBetween: slideGutter,
+
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 2,
+			},
+			900: {
+				slidesPerView: 3
+			}
+		}
 
 	});
 

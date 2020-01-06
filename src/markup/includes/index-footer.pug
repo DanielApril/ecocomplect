@@ -1,30 +1,41 @@
 footer.footer
 	.container
-		.flex._top
-			div
-				div Разделы сайта
-				ul
-					li Главная
-					li Технология строительства
-					li Космический утеплитель
-					li Дома и цены
-					li 3D тур
-					li Отзывы
-					li Сверхтеплые дома
-					li Преимущества
-					li Галерея домов
-					li Инновационные стеклопакеты
-					li Основатель
-					li Выставочные дома
-			div
-				div Категории домов
-				ul
-					li Alpha
-					li Mini
-					li Opti
-					li Midi
-					li Maxi
-					li Omega
-					li Гостевой дом
-					li Баня
-					li Гараж
+		.flex._vertical
+			.flex._top
+				.footer__list
+					span.footer__title Разделы сайта
+					ul.footer__list-inner
+						li Главная
+						li Технология строительства
+						li Космический утеплитель
+						li Дома и цены
+						li 3D тур
+						li Отзывы
+						li Сверхтеплые дома
+						li Преимущества
+						li Галерея домов
+						li Инновационные стеклопакеты
+						li Основатель
+						li Выставочные дома
+				.footer__list
+					span.footer__title Категории домов
+					ul.footer__list-inner
+						li Alpha
+						li Mini
+						li Opti
+						li Midi
+						li Maxi
+						li Omega
+						li Гостевой дом
+						li Баня
+						li Гараж
+
+			.flex._stretch.mt15x
+				.footer__data
+					span Свидетельство о госрегистрации компании:
+					span.mt3x Серия 50 номер 012121201 от 24 марта 2011 г.
+					span ОГРН 311500408300056
+				.footer__policy
+					a(href="/" target="_blank") Политика конфиденциальности
+					
+					span.mt-auto 2011–2019 © Все права защищены
