@@ -4,7 +4,7 @@
 ::-webkit-scrollbar
 	height 12px
 	width 12px
-	background transparent
+	background $cl-grey-1
 
 ::-webkit-scrollbar-thumb
 	border-radius 10px
@@ -12,7 +12,7 @@
 	width 12px
 	border 3px solid rgba(255, 255, 255, 0)
 	background-clip padding-box
-	background-color rgba(#35414C, .3)
+	background-color $cl-grey-5
 	&:hoverol
 		background-color rgba(#2D4668, .4)
 		cursor pointer
@@ -29,6 +29,7 @@
 	background-color $cl-grey-2-07
 	color $cl-white
 	transition .2s background-color ease
+	z-index 5
 
 	&._light
 		background-color $cl-grey-4-06

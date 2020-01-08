@@ -23,17 +23,24 @@ body
 	& > *
 		flex-shrink 0
 
+	+media(mobile)
+		padding 0 20px
+
 .header__logo
 	margin-right 40px
 	color $cl-white
 
 .header__slogan
+	margin-right 40px
 	max-width 160px
 	line-height 16px
 	font-family $ff-promo
-	font-weight 400
+	font-weight 300
 	font-size 14px
 	color $cl-grey-5
+
+	+media(mobile)
+		display none
 
 .header__nav
 	margin 0 auto
@@ -55,7 +62,11 @@ body
 		&:hover
 			text-decoration underline
 
+	+media(tablet mobile)
+		display none
+
 .header__phone
+	margin-left auto
 	text-decoration none
 	color $cl-grey-5
 
