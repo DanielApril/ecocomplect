@@ -10,14 +10,16 @@
 			height 100%
 
 		.social
+			&._in
+				background-color $cl-grey-4
+
+		.social__inner
 			display flex
 			flex-direction column
 			justify-content center
 			align-items center
+			padding 32px
 			height 100%
-
-			&._in
-				background-color $cl-grey-4
 
 		.social__icon
 			margin-bottom 4px
@@ -45,10 +47,24 @@
 			border 1px solid $cl-grey-4
 			border-radius 4px
 
+			+media(mobile)
+				margin-bottom 24px
+
 		.benefit__desc
 			@extend $text
 			margin-top 24px
 			color $cl-grey-3
+
+			+media(mobile)
+				margin-top 16px
+				line-height 1.3
+				font-size 14px
+
+
+.new-project-slider
+	.swiper-slide
+		@extend $style-dummy
+
 
 .warm-house
 	text-align center
@@ -60,6 +76,15 @@
 	margin auto 160px 120px auto
 	text-align right
 
+	+media(tablet-lg)
+		margin auto 80px 80px auto
+
+	+media(tablet-sm)
+		margin auto 32px 32px auto
+
+	+media(mobile)
+		margin 120px 12px 32px
+
 .projects
 	display flex
 	flex-direction column
@@ -69,6 +94,9 @@
 
 .projects__list
 	margin 48px 20px
+
+	+media(mobile)
+		margin 48px 0
 
 .preview
 	display flex
@@ -118,14 +146,27 @@
 .preview__about
 	padding 8px 24px 32px
 
+	+media(mobile)
+		flex-direction column
+
 .preview__about-left
 .preview__about-right
 	width 50%
+
+	+media(mobile)
+		margin-right auto
+		margin-bottom 24px
+		margin-left auto
+		max-width 300px
+		width 100%
 
 .preview__about-left
 	display flex
 	flex-direction column
 	margin-right 20px
+
+	+media(mobile)
+		margin-right auto
 
 .preview__about-value
 	line-height 20px
@@ -166,6 +207,11 @@
 	border-radius 4px
 	box-shadow $shadow
 
+	+media(mobile)
+		margin 12px auto
+		max-width 320px
+		height 320px
+
 .review__img
 	flex-grow 1
 	@extend $style-img-resp
@@ -183,6 +229,11 @@
 	line-height 32px
 	font-family $ff-promo
 	font-size 24px
+
+	+media(mobile)
+		min-height 80px
+		line-height 1.3
+		font-size 18px
 
 
 .showrooms

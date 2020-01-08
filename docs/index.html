@@ -8,6 +8,24 @@
     <link rel="stylesheet" href="static/css/style.css">
   </head>
   <body>
+    <header class="header index-header">
+      <div class="header__inner"><a class="header__logo" href="/"><img src="" alt="Logo"></a><span class="header__slogan">Дома заводского производства</span>
+        <nav class="header__nav">
+          <ul>
+            <li><a href="/">Alpha</a></li>
+            <li><a href="/">Mini</a></li>
+            <li><a href="/">Opti</a></li>
+            <li><a href="/">Midi</a></li>
+            <li><a href="/">Maxi</a></li>
+            <li><a href="/">Omega</a></li>
+            <li><a href="/">Гостевой дом</a></li>
+            <li><a href="/">Баня</a></li>
+            <li><a href="/">Гараж</a></li>
+          </ul>
+        </nav><a class="header__phone" href="tel:+78002223751">+78002223751</a>
+        <button class="header__menu-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+      </div>
+    </header>
     <main>
       <section class="section _first-section _dark _lg">
         <div class="container _fluid _clean">
@@ -70,25 +88,25 @@
       </section>
       <section class="section _socials _light _stretch">
         <div class="container _fluid _clean">
-          <div class="row">
-            <div class="col-4">
-              <div class="flex _vertical _center social _yt">
+          <div class="row row-g0">
+            <div class="col-4 _t-12 _m-12 social _yt">
+              <div class="flex _vertical _center social__inner">
                 <div class="social__icon"><i class="fa fa-youtube-play" aria-hidden="true"></i>
                 </div>
                 <div class="social__amount">145000</div>
                 <div class="social__name">Youtube</div>
               </div>
             </div>
-            <div class="col-4">
-              <div class="flex _vertical _center social _in">
+            <div class="col-4 _t-12 _m-12 social _in">
+              <div class="flex _vertical _center social__inner">
                 <div class="social__icon"><i class="fa fa-instagram" aria-hidden="true"></i>
                 </div>
                 <div class="social__amount">275000</div>
                 <div class="social__name">Instagram</div>
               </div>
             </div>
-            <div class="col-4">
-              <div class="flex _vertical _center social _vk">
+            <div class="col-4 _t-12 _m-12 social _vk">
+              <div class="flex _vertical _center social__inner">
                 <div class="social__icon"><i class="fa fa-vk" aria-hidden="true"></i>
                 </div>
                 <div class="social__amount">120064</div>
@@ -100,7 +118,25 @@
       </section>
       <section class="section _new-house _lg">
         <div class="container _fluid _clean">
-          <div class="section__half _slider"></div>
+          <div class="section__half _slider">
+            <div class="new-project-slider swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="new-project"><img src=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="new-project"><img src=""></div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="new-project"><img src=""></div>
+                </div>
+              </div>
+              <div class="swiper-button-prev"><i class="fa fa-angle-left" aria-hidden="true"></i>
+              </div>
+              <div class="swiper-button-next"><i class="fa fa-angle-right" aria-hidden="true"></i>
+              </div>
+            </div>
+          </div>
           <div class="section__half">
             <div class="section__half-inner">
               <h2 class="section__title">Новый дом — ONE 62</h2>
@@ -277,7 +313,7 @@
           <div class="projects">
             <h2 class="section__title mt8x">Проекты и цены</h2>
             <div class="row projects__list row-m24">
-              <div class="col-4">
+              <div class="col-4 _t-l-6 _t-s-8 _left-t-s-2 _m-12">
                 <div class="preview">
                   <div class="preview__top">
                     <div class="preview__name">Omega</div>
@@ -312,7 +348,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-4 _t-l-6 _t-s-8 _left-t-s-2 _m-12">
                 <div class="preview">
                   <div class="preview__top">
                     <div class="preview__name">Omega</div>
@@ -347,7 +383,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-4 _t-l-6 _t-s-8 _left-t-s-2 _m-12">
                 <div class="preview">
                   <div class="preview__top">
                     <div class="preview__name">Omega</div>
@@ -382,7 +418,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-4">
+              <div class="col-4 _t-l-6 _t-s-8 _left-t-s-2 _m-12">
                 <div class="preview">
                   <div class="preview__top">
                     <div class="preview__name">Omega</div>
@@ -547,39 +583,39 @@
       </section>
       <footer class="footer">
         <div class="container">
-          <div class="flex _vertical">
-            <div class="flex _top">
+          <div class="footer__inner">
+            <div class="footer__nav">
               <div class="footer__list"><span class="footer__title">Разделы сайта</span>
-                <ul class="footer__list-inner">
-                  <li>Главная</li>
-                  <li>Технология строительства</li>
-                  <li>Космический утеплитель</li>
-                  <li>Дома и цены</li>
-                  <li>3D тур</li>
-                  <li>Отзывы</li>
-                  <li>Сверхтеплые дома</li>
-                  <li>Преимущества</li>
-                  <li>Галерея домов</li>
-                  <li>Инновационные стеклопакеты</li>
-                  <li>Основатель</li>
-                  <li>Выставочные дома</li>
+                <ul class="footer__list-inner _sections">
+                  <li><a href="">Главная</a></li>
+                  <li><a href="">Технология строительства</a></li>
+                  <li><a href="">Космический утеплитель</a></li>
+                  <li><a href="">Дома и цены</a></li>
+                  <li><a href="">3D тур</a></li>
+                  <li><a href="">Отзывы</a></li>
+                  <li><a href="">Сверхтеплые дома</a></li>
+                  <li><a href="">Преимущества</a></li>
+                  <li><a href="">Галерея домов</a></li>
+                  <li><a href="">Инновационные стеклопакеты</a></li>
+                  <li><a href="">Основатель</a></li>
+                  <li><a href="">Выставочные дома</a></li>
                 </ul>
               </div>
               <div class="footer__list"><span class="footer__title">Категории домов</span>
-                <ul class="footer__list-inner">
-                  <li>Alpha</li>
-                  <li>Mini</li>
-                  <li>Opti</li>
-                  <li>Midi</li>
-                  <li>Maxi</li>
-                  <li>Omega</li>
-                  <li>Гостевой дом</li>
-                  <li>Баня</li>
-                  <li>Гараж</li>
+                <ul class="footer__list-inner _categories">
+                  <li><a href="">Alpha</a></li>
+                  <li><a href="">Mini</a></li>
+                  <li><a href="">Opti</a></li>
+                  <li><a href="">Midi</a></li>
+                  <li><a href="">Maxi</a></li>
+                  <li><a href="">Omega</a></li>
+                  <li><a href="">Гостевой дом</a></li>
+                  <li><a href="">Баня</a></li>
+                  <li><a href="">Гараж</a></li>
                 </ul>
               </div>
             </div>
-            <div class="flex _stretch mt15x">
+            <div class="footer__legal">
               <div class="footer__data"><span>Свидетельство о госрегистрации компании:</span><span class="mt3x">Серия 50 номер 012121201 от 24 марта 2011 г.</span><span>ОГРН 311500408300056</span></div>
               <div class="footer__policy"><a href="/" target="_blank">Политика конфиденциальности</a><span class="mt-auto">2011–2019 © Все права защищены</span></div>
             </div>

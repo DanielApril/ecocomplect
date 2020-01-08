@@ -6,6 +6,67 @@ body
 	@supports (overflow-y overlay)
 		overflow-y overlay
 
+.header
+	position fixed
+	top 0
+	right 0
+	left 0
+	z-index 10
+
+.header__inner
+	display flex
+	align-items center
+	padding 0 40px
+	height 60px
+	background-color $cl-grey-1
+
+	& > *
+		flex-shrink 0
+
+.header__logo
+	margin-right 40px
+	color $cl-white
+
+.header__slogan
+	max-width 160px
+	line-height 16px
+	font-family $ff-promo
+	font-weight 400
+	font-size 14px
+	color $cl-grey-5
+
+.header__nav
+	margin 0 auto
+
+	ul
+		display flex
+		align-items center
+
+	li
+		& + li
+			margin-left 20px
+
+	a
+		@extend $text-navitem
+		text-decoration none
+		text-transform uppercase
+		color $cl-white
+
+		&:hover
+			text-decoration underline
+
+.header__phone
+	text-decoration none
+	color $cl-grey-5
+
+.header__menu-button
+	margin-left 40px
+	padding 0
+	color $cl-grey-5
+	background-color transparent
+	border 0
+	outline none
+
 .section
 	display flex
 	justify-content center
@@ -25,6 +86,9 @@ body
 		.container
 			min-height 800px
 
+			+media(tablet-sm mobile)
+				min-height auto
+
 
 .section__half
 	display flex
@@ -35,7 +99,7 @@ body
 	width 50%
 	min-height 100%
 
-	+media(mobile)
+	+media(tablet-sm mobile)
 		width 100%
 		min-height auto
 		padding 40px 20px
@@ -46,18 +110,20 @@ body
 		&:not([style])
 			@extend $style-dummy
 
-		+media(mobile)
+		+media(tablet-sm mobile)
 			min-height 300px
 
 	&._slider
-		display block
+		align-items stretch
+		padding 0
 
-		&:not([style])
-			@extend $style-dummy
+		.swiper-container
+			width 100%
+			min-height 400px
 
 	&._map
-		padding 0
 		align-items stretch
+		padding 0
 
 		iframe
 			display block
@@ -67,22 +133,34 @@ body
 	.section__title
 		margin-bottom 36px
 
-	.section__desc
-		@extend $text-lg
-		color $cl-grey-3
+		+media(mobile)
+			margin-bottom 24px
 
 	.section__action
 		margin-top 36px
+
+.section__desc
+	@extend $text-lg
+	color $cl-grey-3
+
+	& + .section__desc
+		margin-top 8px
+
+	+media(mobile)
+		line-height 1.3
+		font-size 16px
 
 .section__half-inner
 	padding 80px 0
 	max-width 80%
 	min-width 465px
 
+	+media(tablet mobile)
+		min-width auto
+
 	+media(mobile)
 		padding 0
 		max-width 100%
-		min-width 100%
 
 .container
 	display flex
@@ -94,8 +172,12 @@ body
 	width 100%
 	min-height 400px
 
-	+media(mobile)
+	+media(tablet-sm mobile)
+		min-height auto
 		flex-direction column
+
+	+media(mobile-md mobile-sm)
+		padding 20px 12px
 
 	&._fluid
 		max-width 100%
@@ -109,6 +191,25 @@ body
 	background-color $cl-grey-1
 	color $cl-white
 
+.footer__inner
+	display flex
+	flex-direction column
+
+.footer__nav
+	display flex
+	align-items flex-start
+
+	+media(tablet-sm mobile)
+		flex-direction column
+
+.footer__legal
+	display flex
+	align-items stretch
+	margin-top 80px
+
+	+media(tablet-sm mobile)
+		flex-direction column
+
 .footer__title
 	display block
 	margin-bottom 24px
@@ -121,7 +222,11 @@ body
 
 .footer__list
 	& + .footer__list
-		margin-left 160px
+		margin-left 200px
+
+		+media(tablet-sm mobile)
+			margin-top 32px
+			margin-left 0
 
 		+media(mobile)
 			margin-right 0
@@ -133,9 +238,34 @@ body
 		&:not(:last-child)
 			margin-bottom 16px
 
+	a
+		text-decoration none
+		color inherit
+
+		&:hover
+			text-decoration underline
+
 .footer__list-inner
 	columns 2
-	column-gap 12px
+
+	&._sections
+		column-gap 160px
+
+		+media(tablet-sm)
+			column-gap 80px
+
+		+media(mobile)
+			columns 1
+			column-gap 0
+
+	&._categories
+		column-gap 40px
+
+		+media(mobile-md mobile-sm)
+			columns 1
+			column-gap 0
+
+
 
 .footer__data
 .footer__policy
@@ -149,5 +279,6 @@ body
 	a
 		color $cl-grey-3
 	
-	+media(mobile)
+	+media(tablet-sm mobile)
+		margin-top 32px
 		margin-left 0

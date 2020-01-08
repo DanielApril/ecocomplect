@@ -3,7 +3,6 @@ $(document).ready(function () {
 	const slideGutter = 32;
 
 	var firstScreenSlider = new Swiper('.first-screen-slider', {
-		loop: true,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
@@ -19,7 +18,20 @@ $(document).ready(function () {
 			1024: {
 				simulateTouch: false
 			}
-		}
+		},
+	});
+
+
+	var newProjectSlider = new Swiper('.new-project-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			clickable: true
+		},
+		spaceBetween: slideGutter,
 	});
 
 
