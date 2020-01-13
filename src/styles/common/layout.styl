@@ -43,7 +43,7 @@ body
 		display none
 
 .header__nav
-	margin 0 auto
+	// margin 0 auto
 
 	ul
 		display flex
@@ -92,6 +92,13 @@ body
 
 	&._light
 		background-color $cl-grey-5
+
+	&._md
+		.container
+			min-height 600px
+
+			+media(tablet-sm mobile)
+				min-height auto
 
 	&._lg
 		.container
@@ -143,6 +150,7 @@ body
 
 	.section__title
 		margin-bottom 36px
+		text-align left
 
 		+media(mobile)
 			margin-bottom 24px

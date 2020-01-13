@@ -28,6 +28,7 @@
 	font-size 52px
 	background-color $cl-grey-2-07
 	color $cl-white
+	transform translateY(-50%)
 	transition .2s background-color ease
 	z-index 5
 
@@ -83,22 +84,36 @@
 
 
 .first-screen-slider
+	width 100%
+	height 100%
+
+	.swiper-pagination
+		bottom 140px
+
+.first-screen-slide
+	display flex
+	flex-direction column
+	justify-content center
+	align-items center
 	padding-top 100px
 	padding-bottom 80px
-	width 100%
-	min-height 80vh
-
-	.swiper-slide
-		padding 0 40px
+	padding 100px 40px 80px
+	height 100%
 
 .fullpage-slider
 	width 100%
-	height 100%
+	height 800px
 
 	.swiper-slide
 		width 90%
 		@extend $style-dummy
 		color $cl-white
+
+.first-screen-props
+	display flex
+	justify-content center
+	align-items center
+	margin-top 160px
 
 .props
 	display flex
@@ -135,7 +150,7 @@
 	&._title
 		@extend $text-section-title
 		flex-shrink 0
-		max-width 240px
+		max-width 300px
 		padding-right 40px
 
 		+media(tablet-sm mobile)
@@ -162,3 +177,44 @@
 .props__desc
 	@extend $text-benefit-desc
 	color $cl-grey-3
+
+
+.mobile-menu
+	position fixed
+	z-index 50
+
+.form
+	display flex
+	flex-direction column
+	justify-content flex-start
+	align-items center
+	margin auto
+	padding 80px 20px
+	max-width 580px
+	width 100%
+
+	input
+		&:not(:last-child)
+			margin-bottom 52px
+
+.form__button
+	margin-top 60px
+
+input
+	&[type="text"]
+	&[type="tel"]
+	&[type="email"]
+		display block
+		box-sizing border-box
+		padding 0 4px
+		width 100%
+		height 40px
+		line-height @height
+		letter-spacing .1em
+		font-family $ff-promo
+		font-weight 300
+		font-size 20px
+		color $cl-white
+		background-color transparent
+		border 0
+		border-bottom 1px solid $cl-white

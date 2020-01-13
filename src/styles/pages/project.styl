@@ -1,1 +1,90 @@
 @require '../_vars'
+
+.plans
+	padding 80px 0
+	width 100%
+
+	.plan
+		@extend $style-dummy
+		padding 80px 100px
+		min-height 600px
+
+		+media(tablet-sm mobile)
+			padding 40px
+			min-height 200px
+
+.plans-slider
+	padding 40px 0 0
+
+.gallery
+	width 100%
+
+	.section__title
+		margin 80px 0
+
+.pricelist
+	margin-top 32px
+
+	li
+		display flex
+		flex-wrap wrap
+		align-items flex-start
+		
+		&:not(:last-child)
+			margin-bottom 24px
+
+.pricelist__title
+	@extend $text-navitem
+	line-height 20px
+	text-transform uppercase
+	color $cl-grey-1
+
+.pricelist__value
+	@extend $text-h5
+	flex-shrink 0
+	margin-left 24px
+	line-height 20px
+	color $cl-grey-3
+
+.pricelist__desc
+	@extend $text-sm
+	margin-top 4px
+	width 100%
+	color $cl-grey-3
+
+
+.interior
+	padding 80px 0
+	width 100%
+
+	.section__action
+		margin 0 auto
+
+.interior-slider
+	margin 60px 0
+
+.interior__slide
+	min-height 350px
+	@extend $style-dummy
+
+	+media(tablet-sm mobile)
+		min-height 200px
+
+
+.tour3d-section
+	@extend $style-bg-cover
+	background-image url('./../../static/img/tour3d.jpg')
+
+.tour3d__icon
+	display flex
+	justify-content center
+	align-items center
+	margin 60px auto 0
+	width 160px
+	height @width
+	color $cl-white
+	background-color $cl-grey-2
+	background-image url('./../../static/img/tour3d-icon.svg')
+	background-position 50% 50%
+	background-repeat no-repeat
+	border-radius @width

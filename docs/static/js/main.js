@@ -9,7 +9,7 @@ $(document).ready(function () {
 		},
 		pagination: {
 			el: '.swiper-pagination',
-			clickable: true
+			// clickable: true
 		},
 		breakpoints: {
 			300: {
@@ -42,7 +42,6 @@ $(document).ready(function () {
 		},
 		slidesPerView: 'auto',
 		spaceBetween: slideGutter
-
 	});
 
 
@@ -65,7 +64,6 @@ $(document).ready(function () {
 				slidesPerView: 3
 			}
 		}
-
 	});
 
 
@@ -88,7 +86,50 @@ $(document).ready(function () {
 				slidesPerView: 3
 			}
 		}
+	});
 
+
+	var plansSlider = new Swiper('.plans-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		// centeredSlides: true,
+		spaceBetween: slideGutter,
+
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+			},
+			900: {
+				slidesPerView: 2
+			}
+		}
+	});
+
+
+	var interiorSlider = new Swiper('.interior-slider', {
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		// centeredSlides: true,
+		spaceBetween: slideGutter,
+
+		breakpoints: {
+			300: {
+				slidesPerView: 1,
+			},
+			600: {
+				slidesPerView: 2
+			},
+			900: {
+				slidesPerView: 3
+			},
+			1200: {
+				slidesPerView: 4
+			}
+		}
 	});
 
 
