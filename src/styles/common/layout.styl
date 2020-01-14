@@ -123,10 +123,11 @@ body
 		padding 40px 20px
 
 	&._img
-		@extend $style-bg-cover
+		padding 0
+		height 100%
 
-		&:not([style])
-			@extend $style-dummy
+		img
+			@extend $style-img-cover
 
 		+media(tablet-sm mobile)
 			min-height 300px

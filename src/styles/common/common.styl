@@ -91,6 +91,7 @@
 		bottom 140px
 
 .first-screen-slide
+	@extend $style-bg-cover
 	display flex
 	flex-direction column
 	justify-content center
@@ -108,6 +109,15 @@
 		width 90%
 		@extend $style-dummy
 		color $cl-white
+
+.fullpage-slide
+	display flex
+	justify-content center
+	align-items center
+	height 100%
+
+	img
+		@extend $style-img-cover
 
 .first-screen-props
 	display flex

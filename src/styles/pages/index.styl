@@ -65,9 +65,24 @@
 	.swiper-slide
 		@extend $style-dummy
 
+.new-project
+	display flex
+	justify-content center
+	align-items center
+	height 100%
+
+	img
+		@extend $style-img-cover
 
 .warm-house
 	text-align center
+
+.creator-section
+	@extend $style-bg-cover
+	background-image url('./../../static/img/creator.jpg')
+
+	.container
+		background linear-gradient(180deg, rgba(0, 0, 0, 0) 48.44%, rgba(0, 0, 0, 0.61) 100%);
 
 .creator
 	display flex
@@ -75,6 +90,9 @@
 	align-items flex-end
 	margin auto 160px 120px auto
 	text-align right
+
+	.section__title
+		text-align right
 
 	+media(tablet-lg)
 		margin auto 80px 80px auto
@@ -136,8 +154,11 @@
 	color $cl-grey-3
 
 .preview__img
-	@extend $style-dummy
+	flex-shrink 0
 	height 268px
+
+	img
+		@extend $style-img-cover
 
 .preview__props
 	justify-content center
@@ -214,9 +235,11 @@
 
 .review__img
 	flex-grow 1
-	@extend $style-img-resp
-	@extend $style-dummy
 	color $cl-white
+	background linear-gradient(180deg, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.8) 92.97%)
+
+	img
+		@extend $style-img-cover
 
 .review__title
 	display flex
@@ -255,10 +278,15 @@
 .showroom__img
 	@extend $style-cover
 	z-index 1
-	@extend $style-dummy
+
+	&::before
+		content ''
+		@extend $style-cover
+		background linear-gradient(180deg, rgba(0, 0, 0, 0.25) 50%, rgba(0, 0, 0, 0.8) 92.97%)
+		z-index 1
 
 	img
-		@extend $style-img-resp
+		@extend $style-img-cover
 
 .showroom__desc
 	position relative
