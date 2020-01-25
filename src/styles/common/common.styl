@@ -123,6 +123,9 @@
 .swiper-pagination
 	bottom 40px
 
+	+media(tablet-sm mobile)
+		display none
+
 	.swiper-pagination-bullet
 		width 12px
 		height @width
@@ -147,10 +150,11 @@
 	flex-direction column
 	justify-content center
 	align-items center
-	padding-top 100px
-	padding-bottom 80px
 	padding 100px 40px 80px
 	height 100%
+
+	+media(tablet-sm mobile)
+		padding-top 140px
 
 .first-screen-slide
 	& > *:not(.backdrop)
@@ -175,6 +179,9 @@
 	align-items center
 	margin-top 160px
 
+	+media(tablet-sm mobile)
+		margin-top 40px
+
 .props
 	display flex
 	justify-content center
@@ -183,8 +190,19 @@
 	&._lg
 		.props__item
 			min-height 80px
+
+			&._title
+				+media(tablet-sm mobile)
+					min-height auto
+
 		.props__value
-			@extend $text-section-title
+			line-height 44px
+			font-family $ff-promo
+			font-size 36px
+
+			+media(tablet-sm mobile)
+				line-height 1.2
+				font-size 24px
 
 	&._light
 		color $cl-white
@@ -195,8 +213,8 @@
 	&._left
 		justify-content flex-start
 
-	+media(mobile)
-		flex-direction column
+	+media(tablet-sm mobile)
+		flex-wrap wrap
 
 .props__item
 	display flex
@@ -207,6 +225,9 @@
 	min-width 120px
 	min-height 60px
 
+	+media(tablet-sm mobile)
+		min-width 80px
+
 	&._title
 		@extend $text-section-title
 		flex-shrink 0
@@ -216,22 +237,27 @@
 		+media(tablet-sm mobile)
 			line-height 1.3
 			font-size 24px
-			min-height auto
 			padding-right 12px
+			min-height auto
+			max-width 100%
+			width 100%
 
 	&:not(:last-child)
 		border-right-width 1px
 		border-right-style solid
 		border-right-color $cl-grey-4
 
-		+media(mobile)
+		+media(tablet-sm mobile)
 			border 0
 
 .props__value
-	@extend $text-benefit-title
+	line-height 24px
+	font-family $ff-promo
+	font-weight 500
+	font-size 24px
 
 	+media(tablet-sm mobile)
-		line-height 1
+		line-height 1.2
 		font-size 24px
 
 .props__desc

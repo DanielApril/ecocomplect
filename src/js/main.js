@@ -141,20 +141,24 @@ $(document).ready(function () {
 	var mobileMenuOpen = $('.header__menu-button');
 	var mobileMenuClose = $('.mobile-menu__close');
 	var pageBackdrop = $('.page-backdrop');
+	var body = $('body');
 
 	mobileMenuOpen.on('click', function() {
 		mobileMenu.addClass('_visible');
 		pageBackdrop.fadeIn(300);
+		body.addClass('no-scroll');
 	});
 
 	mobileMenuClose.on('click', function() {
 		mobileMenu.removeClass('_visible');
 		pageBackdrop.fadeOut(300);
+		body.removeClass('no-scroll');
 	});
 
 	pageBackdrop.on('click', function () {
 		mobileMenu.removeClass('_visible');
 		pageBackdrop.fadeOut(300);
+		body.removeClass('no-scroll');
 	});
 
 

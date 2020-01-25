@@ -2,6 +2,10 @@
 
 body
 	overflow-x hidden
+	overflow-y overlay
+
+	&.no-scroll
+		overflow-y hidden
 
 .header
 	position fixed
@@ -130,7 +134,6 @@ body
 			@extend $style-img-cover
 
 		+media(tablet-sm mobile)
-			min-height 300px
 			height auto
 
 	&._slider
