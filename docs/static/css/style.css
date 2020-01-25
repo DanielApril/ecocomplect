@@ -6542,6 +6542,7 @@ body.no-scroll {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section._warm-house {
     margin-top: 32px;
+    padding: 0 0 60px;
   }
 }
 .new-project {
@@ -6554,6 +6555,7 @@ body.no-scroll {
   text-align: center;
 }
 .creator-section {
+  min-height: 400px;
   background-image: url("./../../static/img/creator.jpg");
   background-position: 50% 0;
 }
@@ -6712,12 +6714,6 @@ body.no-scroll {
 }
 .reviews-slider {
   margin-top: 36px;
-  padding: 0 32px;
-}
-@media only screen and (min-width: 601px) and (max-width: 1200px), only screen and (max-width: 600px) {
-  .reviews-slider {
-    padding: 0;
-  }
 }
 .review {
   display: flex;
