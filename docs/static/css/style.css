@@ -5705,7 +5705,7 @@ button.swiper-pagination-bullet {
 .section__title {
   text-align: center;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section__title {
     line-height: 1.3;
     font-size: 24px;
@@ -5780,6 +5780,10 @@ ul._light li {
 }
 ul._right li {
   text-align: right;
+}
+sup {
+  vertical-align: super;
+  font-size: 0.6em;
 }
 * {
   box-sizing: border-box;
@@ -6243,6 +6247,7 @@ body.no-scroll {
 .section__half._map {
   align-items: stretch;
   padding: 0;
+  min-height: 400px;
 }
 .section__half._map iframe {
   display: block;
@@ -6253,7 +6258,7 @@ body.no-scroll {
   margin-bottom: 36px;
   text-align: left;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section__half .section__title {
     margin-bottom: 24px;
   }
@@ -6283,7 +6288,7 @@ body.no-scroll {
     min-width: auto;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section__half-inner {
     padding: 0;
     max-width: 100%;
@@ -6497,6 +6502,14 @@ body.no-scroll {
     font-size: 14px;
   }
 }
+.section._reviews {
+  padding: 40px 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .section._showroom {
+    margin-top: 40px;
+  }
+}
 .new-project {
   display: flex;
   justify-content: center;
@@ -6573,11 +6586,23 @@ body.no-scroll {
   flex-wrap: wrap;
   padding: 32px 24px;
 }
+@media only screen and (max-width: 600px) {
+  .preview__top {
+    padding: 20px 16px;
+  }
+}
 .preview__name {
   flex-grow: 1;
 }
 .preview__price {
   flex-shrink: 0;
+}
+@media only screen and (max-width: 600px) {
+  .preview__name,
+  .preview__price {
+    line-height: 1;
+    font-size: 16px;
+  }
 }
 .preview__desc {
   margin-top: 4px;
@@ -6598,6 +6623,7 @@ body.no-scroll {
 @media only screen and (max-width: 600px) {
   .preview__about {
     flex-direction: column;
+    padding: 4px 16px 4px;
   }
 }
 .preview__about-left,
@@ -6678,12 +6704,8 @@ body.no-scroll {
   background: linear-gradient(180deg, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.8) 92.97%);
 }
 .review__title {
-  display: flex;
   flex-shrink: 0;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 24px;
-  min-height: 160px;
+  padding: 32px 24px;
   text-align: center;
   line-height: 32px;
   font-family: Montserrat, sans-serif;
@@ -6711,6 +6733,16 @@ body.no-scroll {
   height: 600px;
   background-color: #424242;
   z-index: 1;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .showroom {
+    height: 400px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .showroom {
+    height: 300px;
+  }
 }
 .showroom__img {
   z-index: 1;
