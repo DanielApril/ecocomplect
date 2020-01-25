@@ -41,7 +41,11 @@ $(document).ready(function () {
 			prevEl: '.swiper-button-prev',
 		},
 		slidesPerView: 'auto',
-		spaceBetween: slideGutter
+		spaceBetween: slideGutter,
+		// slidesOffsetBefore: 10,
+		// slidesOffsetAfter: 20,
+		centeredSlides: true,
+		// centeredSlidesBounds: true
 	});
 
 
@@ -131,6 +135,29 @@ $(document).ready(function () {
 			}
 		}
 	});
+
+	
+	var mobileMenu = $('.mobile-menu');
+	var mobileMenuOpen = $('.header__menu-button');
+	var mobileMenuClose = $('.mobile-menu__close');
+	var pageBackdrop = $('.page-backdrop');
+
+	mobileMenuOpen.on('click', function() {
+		mobileMenu.addClass('_visible');
+		pageBackdrop.fadeIn(300);
+	});
+
+	mobileMenuClose.on('click', function() {
+		mobileMenu.removeClass('_visible');
+		pageBackdrop.fadeOut(300);
+	});
+
+	pageBackdrop.on('click', function () {
+		mobileMenu.removeClass('_visible');
+		pageBackdrop.fadeOut(300);
+	});
+
+
 
 
 });

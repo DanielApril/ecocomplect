@@ -9,7 +9,8 @@
   </head>
   <body>
     <header class="header index-header">
-      <div class="header__inner"><a class="header__logo" href="/"><img src="" alt="Logo"></a><span class="header__slogan">Дома заводского производства</span>
+      <div class="header__inner">
+        <div class="header__left"><a class="header__logo" href="/"><img src="./static/img/logo.svg" alt="Logo"></a><span class="header__slogan">Дома заводского производства</span></div>
         <nav class="header__nav">
           <ul>
             <li><a href="alpha.html">Alpha</a></li>
@@ -22,19 +23,23 @@
             <li><a href="/">Баня</a></li>
             <li><a href="/">Гараж</a></li>
           </ul>
-        </nav><a class="header__phone" href="tel:+78002223751">+78002223751</a>
-        <button class="header__menu-button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </nav>
+        <div class="header__right"><a class="header__phone" href="tel:+78002223751">+78002223751</a>
+          <button class="button header__menu-button _clean" type="button"><i class="fa fa-bars" aria-hidden="true"></i></button>
+        </div>
       </div>
     </header>
+    <div class="page-backdrop"></div>
     <main>
       <section class="section _first-section _dark _lg">
         <div class="container _fluid _clean">
           <div class="swiper-container first-screen-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
-                <div class="first-screen-slide">
+                <div class="first-screen-slide" style="background-image: url(./static/img/6jyxOTJhVX0.jpg)">
                   <h1 class="h1">Дом ALPHA</h1>
                   <h3 class="h3 mt5x">Сверхтеплый, недорогой, экологичный дом заводского производства</h3>
+                  <div class="backdrop"></div>
                 </div>
               </div>
             </div>
@@ -131,14 +136,11 @@
           <div class="section__half _img"></div>
           <div class="section__half">
             <div class="section__half-inner">
-              <h2 class="section__title">Цена</h2>
+              <h2 class="section__title">Цена домокомплекта</h2>
               <h2 class="h2">3 500 000 ₽</h2>
               <p class="mt3x fz-sm cl-light">Цена теплого контура — без отделки. Отделка будет рассчитываться нашими менеджерами отдельно и цена будет зависеть от выбранных вами отделочных материалов.</p>
+              <p class="fz-sm cl-light">Помимо домокомплекта Вам понадобятся следующие комплектующие:</p>
               <ul class="pricelist _check _light">
-                <li><span class="pricelist__title">Домокомплект</span>
-                  <h5 class="pricelist__value">2 500 000 ₽</h5>
-                  <p class="pricelist__desc">Набор элементов дома: стены, крыша, окна</p>
-                </li>
                 <li><span class="pricelist__title">Фундамент</span>
                   <h5 class="pricelist__value">500 000 ₽</h5>
                   <p class="pricelist__desc">Основа дома вместе со сваями и подложкой</p>
@@ -259,16 +261,32 @@
               </div>
             </div>
             <div class="footer__legal">
-              <div class="footer__data"><span>Свидетельство о госрегистрации компании:</span><span class="mt3x">Серия 50 номер 012121201 от 24 марта 2011 г.</span><span>ОГРН 311500408300056</span></div>
-              <div class="footer__policy"><a href="/" target="_blank">Политика конфиденциальности</a><span class="mt-auto">2011–2020 © Все права защищены</span></div>
+              <div class="footer__data">
+                <div class="footer__logo"><img src="./static/img/logo.svg" alt="Logo"></div><span>Свидетельство о госрегистрации компании:</span><span class="mt3x">Серия 50 номер 012121201 от 24 марта 2011 г.</span><span>ОГРН 311500408300056</span>
+              </div>
+              <div class="footer__policy"><a class="mt-auto" href="/" target="_blank">Политика конфиденциальности</a><span class="mt3x">2011–2020 © Все права защищены</span></div>
             </div>
           </div>
         </div>
       </footer>
     </main>
     <div class="mobile-menu">
-      <div class="mobile-menu__content"></div>
-      <button class="mobile-menu__close"></button>
+      <div class="mobile-menu__content">
+        <nav class="header__nav">
+          <ul>
+            <li><a href="alpha.html">Alpha</a></li>
+            <li><a href="/">Mini</a></li>
+            <li><a href="/">Opti</a></li>
+            <li><a href="/">Midi</a></li>
+            <li><a href="/">Maxi</a></li>
+            <li><a href="/">Omega</a></li>
+            <li><a href="/">Гостевой дом</a></li>
+            <li><a href="/">Баня</a></li>
+            <li><a href="/">Гараж</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button class="button mobile-menu__close _clean" type="button"><i class="fa fa-close" aria-hidden="true"></i></button>
     </div>
     <div class="modal">
       <div class="modal__inner">

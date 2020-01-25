@@ -8,6 +8,7 @@ $cl-grey-2-07	= rgba($cl-grey-2,.7)
 $cl-grey-4-06	= rgba($cl-grey-4,.6)
 
 $cl-white		= #FFFFFF
+$cl-black		= $cl-grey-1
 
 $shadow		= 0 1px 4px 0 rgba($cl-grey-1,.25)
 
@@ -47,7 +48,7 @@ $text-h5
 
 $text-lg
 	line-height 28px
-	font-size 22px
+	font-size 20px
 
 $text
 	line-height 24px
@@ -137,6 +138,14 @@ $style-img-contain
 $style-dummy
 	background rgb(63,32,215)
 	background linear-gradient(45deg, rgba(63,32,215,1) 0%, rgba(221,67,67,1) 100%)
+
+
+$style-backdrop
+	@extend $style-cover
+	content ''
+	background-color $cl-black
+	opacity .5
+	z-index 0
 
 
 $mb-mobile-sm			= 340px		// < 340

@@ -17,6 +17,53 @@
 		background-color rgba(#2D4668, .4)
 		cursor pointer
 
+.backdrop
+	@extend $style-backdrop
+
+.page-backdrop
+	@extend $style-backdrop
+	position fixed
+	display none
+	z-index 50
+
+.mobile-menu
+	position fixed
+	top 0
+	right 0
+	bottom 0
+	left auto
+	padding 40px 32px
+	width 300px
+	background-color $cl-white
+	box-shadow $shadow
+	overflow-y auto
+	transform translateX(100%)
+	transition transform .2s
+	z-index 50
+
+	&._visible
+		transform translateX(0)
+
+	.header__nav
+		ul
+			flex-direction column
+			align-items flex-start
+
+		li
+			& + li
+				margin-top 12px
+				margin-left 0
+
+		a
+			color $cl-black
+
+.mobile-menu__close
+	position absolute
+	top 8px
+	right 8px
+	color $cl-black
+
+
 .swiper-button-prev
 .swiper-button-next
 	display flex
@@ -101,14 +148,13 @@
 	padding 100px 40px 80px
 	height 100%
 
+.first-screen-slide
+	& > *:not(.backdrop)
+		z-index 1
+
 .fullpage-slider
 	width 100%
 	height 800px
-
-	.swiper-slide
-		width 90%
-		@extend $style-dummy
-		color $cl-white
 
 .fullpage-slide
 	display flex
@@ -187,11 +233,6 @@
 .props__desc
 	@extend $text-benefit-desc
 	color $cl-grey-3
-
-
-.mobile-menu
-	position fixed
-	z-index 50
 
 .form
 	display flex
