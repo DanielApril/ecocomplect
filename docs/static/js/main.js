@@ -42,10 +42,7 @@ $(document).ready(function () {
 		},
 		slidesPerView: 'auto',
 		spaceBetween: slideGutter,
-		// slidesOffsetBefore: 10,
-		// slidesOffsetAfter: 20,
 		centeredSlides: true,
-		// centeredSlidesBounds: true
 	});
 
 
@@ -54,7 +51,6 @@ $(document).ready(function () {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		// centeredSlides: true,
 		spaceBetween: slideGutter,
 
 		breakpoints: {
@@ -76,18 +72,21 @@ $(document).ready(function () {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
-		// centeredSlides: true,
 		spaceBetween: slideGutter,
 
 		breakpoints: {
 			300: {
 				slidesPerView: 1,
+				slidesOffsetBefore: 48,
+				slidesOffsetAfter: 48,
 			},
 			600: {
 				slidesPerView: 2,
 			},
 			900: {
-				slidesPerView: 3
+				slidesPerView: 3,
+				slidesOffsetBefore: 120,
+				slidesOffsetAfter: 120,
 			}
 		}
 	});

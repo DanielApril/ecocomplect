@@ -135,6 +135,8 @@ body
 
 		+media(tablet-sm mobile)
 			height auto
+			max-height 320px
+			overflow hidden
 
 	&._slider
 		align-items stretch
@@ -147,7 +149,9 @@ body
 	&._map
 		align-items stretch
 		padding 0
-		min-height 400px
+
+		+media(tablet-sm mobile)
+			min-height 400px
 
 		iframe
 			display block
@@ -209,6 +213,14 @@ body
 
 	&._clean
 		padding 0
+
+	&._revert
+		+media(tablet-sm mobile)
+			.section__half
+				&:first-child
+					order 2
+				&:last-child
+					order 1
 
 
 .footer

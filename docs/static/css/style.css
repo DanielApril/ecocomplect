@@ -5958,6 +5958,11 @@ sup {
   width: 100%;
   height: 800px;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .fullpage-slider {
+    height: 400px;
+  }
+}
 .fullpage-slide {
   display: flex;
   justify-content: center;
@@ -6241,6 +6246,8 @@ body.no-scroll {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section__half._img {
     height: auto;
+    max-height: 320px;
+    overflow: hidden;
   }
 }
 .section__half._slider {
@@ -6254,7 +6261,11 @@ body.no-scroll {
 .section__half._map {
   align-items: stretch;
   padding: 0;
-  min-height: 400px;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .section__half._map {
+    min-height: 400px;
+  }
 }
 .section__half._map iframe {
   display: block;
@@ -6327,6 +6338,14 @@ body.no-scroll {
 }
 .container._clean {
   padding: 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .container._revert .section__half:first-child {
+    order: 2;
+  }
+  .container._revert .section__half:last-child {
+    order: 1;
+  }
 }
 .footer {
   padding: 80px 0 120px;
@@ -6517,6 +6536,14 @@ body.no-scroll {
     margin-top: 40px;
   }
 }
+.section._warm-house {
+  padding: 60px 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .section._warm-house {
+    margin-top: 32px;
+  }
+}
 .new-project {
   display: flex;
   justify-content: center;
@@ -6528,6 +6555,7 @@ body.no-scroll {
 }
 .creator-section {
   background-image: url("./../../static/img/creator.jpg");
+  background-position: 50% 0;
 }
 .creator-section .container {
   background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);
@@ -6731,12 +6759,12 @@ body.no-scroll {
   }
 }
 .showrooms {
-  text-align: center;
+  padding: 20px 0;
   width: 100%;
+  text-align: center;
 }
 .showrooms-slider {
   margin-top: 36px;
-  padding: 0 32px;
 }
 .showroom {
   display: flex;
@@ -6770,7 +6798,7 @@ body.no-scroll {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin-top: auto;
+  margin: auto auto 0;
   padding: 40px 24px;
   text-align: center;
   z-index: 2;
@@ -6786,6 +6814,7 @@ body.no-scroll {
 .showroom__link {
   margin-top: 20px;
   text-decoration: none;
+  font-weight: 300;
   color: #fff;
   border-bottom: 1px solid;
 }

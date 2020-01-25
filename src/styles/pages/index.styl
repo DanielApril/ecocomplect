@@ -76,6 +76,12 @@
 		+media(tablet-sm mobile)
 			margin-top 40px
 
+	&._warm-house
+		padding 60px 0
+
+		+media(tablet-sm mobile)
+			margin-top 32px
+
 
 .new-project-slider
 	.swiper-slide
@@ -96,6 +102,7 @@
 .creator-section
 	@extend $style-bg-cover
 	background-image url('./../../static/img/creator.jpg')
+	background-position 50% 0
 
 	.container
 		background linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.6) 100%)
@@ -283,12 +290,12 @@
 
 
 .showrooms
-	text-align center
+	padding 20px 0
 	width 100%
+	text-align center
 
 .showrooms-slider
 	margin-top 36px
-	padding 0 32px
 
 .showroom
 	display flex
@@ -323,7 +330,7 @@
 	flex-direction column
 	justify-content flex-start
 	align-items center
-	margin-top auto
+	margin auto auto 0
 	padding 40px 24px
 	text-align center
 	z-index 2
@@ -340,5 +347,6 @@
 	@extend $text-h5
 	margin-top 20px
 	text-decoration none
+	font-weight 300
 	color $cl-white
 	border-bottom 1px solid
