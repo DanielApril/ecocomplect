@@ -5,11 +5,17 @@
 	width 100%
 
 	.plan
-		@extend $style-dummy
-		padding 80px 100px
+		padding 20px 100px
 		min-height 600px
 
+		img
+			@extend $style-img-contain
+		
+		+media(tablet-lg)
+			min-height auto
+
 		+media(tablet-sm mobile)
+			min-height auto
 			padding 40px
 			min-height 200px
 
