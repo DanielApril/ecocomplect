@@ -6523,7 +6523,12 @@ body.no-scroll {
   background-image: url("./../../static/img/creator.jpg");
 }
 .creator-section .container {
-  background: linear-gradient(180deg, rgba(0,0,0,0) 48.44%, rgba(0,0,0,0.61) 100%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%);
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .creator-section .container {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 10%, rgba(0,0,0,0.9) 100%);
+  }
 }
 .creator {
   display: flex;
