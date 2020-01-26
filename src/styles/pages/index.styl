@@ -82,7 +82,17 @@
 		+media(tablet-sm mobile)
 			margin-top 32px
 			padding 0 0 60px
+		
+		.video
+			margin-top 24px
+			margin-bottom 60px
 
+			+media(tablet-sm mobile)
+				margin-bottom 32px
+
+	&._slider
+		+media(tablet-sm mobile)
+			margin-bottom 40px
 
 .new-project-slider
 	.swiper-slide
@@ -142,7 +152,7 @@
 	margin 48px 20px
 
 	+media(mobile)
-		margin 48px 0
+		margin 20px 0
 
 .preview
 	display flex
@@ -187,6 +197,9 @@
 	margin-top 4px
 	width 100%
 	color $cl-grey-3
+
+	+media(mobile)
+		margin-top 8px
 
 .preview__img
 	flex-shrink 0
@@ -247,6 +260,9 @@
 
 .reviews-slider
 	margin-top 36px
+
+	+media(tablet-sm mobile)
+		margin-top 12px
 
 .review
 	display flex

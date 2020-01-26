@@ -187,6 +187,10 @@
 	+media(tablet-sm mobile)
 		margin-top 40px
 
+		.props__item
+			&:first-child
+				border 0
+
 .props
 	display flex
 	justify-content center
@@ -251,9 +255,6 @@
 		border-right-width 1px
 		border-right-style solid
 		border-right-color $cl-grey-4
-
-		+media(tablet-sm mobile)
-			border 0
 
 .props__value
 	line-height 24px
