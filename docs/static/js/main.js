@@ -84,8 +84,8 @@ $(document).ready(function () {
 		breakpoints: {
 			300: {
 				slidesPerView: 1,
-				slidesOffsetBefore: 48,
-				slidesOffsetAfter: 48,
+				// slidesOffsetBefore: 48,
+				// slidesOffsetAfter: 48,
 			},
 			600: {
 				slidesPerView: 2,
