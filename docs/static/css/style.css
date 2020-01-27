@@ -6417,6 +6417,13 @@ body.no-scroll {
   font-size: 14px;
   color: #808080;
 }
+@media only screen and (max-width: 600px) {
+  .footer__title {
+    line-height: 1.2;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
 .footer__list + .footer__list {
   margin-left: 200px;
 }
@@ -6436,6 +6443,14 @@ body.no-scroll {
 }
 .footer__list li:not(:last-child) {
   margin-bottom: 16px;
+}
+@media only screen and (max-width: 600px) {
+  .footer__list li {
+    text-transform: none;
+    line-height: 1.2;
+    font-weight: 400;
+    font-size: 12px;
+  }
 }
 .footer__list a {
   text-decoration: none;

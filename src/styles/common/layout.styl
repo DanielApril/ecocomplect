@@ -263,6 +263,11 @@ body
 	font-size 14px
 	color $cl-grey-3
 
+	+media(mobile)
+		line-height 1.2
+		font-weight 500
+		font-size 12px
+
 .footer__list
 	& + .footer__list
 		margin-left 200px
@@ -280,6 +285,12 @@ body
 
 		&:not(:last-child)
 			margin-bottom 16px
+
+		+media(mobile)
+			text-transform none
+			line-height 1.2
+			font-weight 400
+			font-size 12px
 
 	a
 		text-decoration none
