@@ -3282,6 +3282,9 @@ button.swiper-pagination-bullet {
   border: 0;
   outline: none;
 }
+.button._fluid {
+  width: 100%;
+}
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .button {
     height: 40px;
@@ -6088,7 +6091,6 @@ sup {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .props__value {
     line-height: 1.2;
-    font-size: 24px;
   }
 }
 .props__desc {
@@ -6725,13 +6727,27 @@ body.no-scroll {
   justify-content: center;
   padding: 16px 24px 8px;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .preview__props {
+    padding: 16px 16px 8px;
+  }
+  .preview__props .props__item {
+    flex-grow: 1;
+  }
+  .preview__props .props__item:first-child {
+    padding-left: 0;
+  }
+  .preview__props .props__item:last-child {
+    padding-right: 0;
+  }
+}
 .preview__about {
-  padding: 8px 24px 32px;
+  padding: 8px 24px;
 }
 @media only screen and (max-width: 600px) {
   .preview__about {
     flex-direction: column;
-    padding: 4px 16px 4px;
+    padding: 4px 16px;
   }
 }
 .preview__about-left,
@@ -6744,7 +6760,7 @@ body.no-scroll {
     margin-right: auto;
     margin-bottom: 24px;
     margin-left: auto;
-    max-width: 300px;
+    max-width: 320px;
     width: 100%;
   }
 }
@@ -6773,6 +6789,20 @@ body.no-scroll {
   line-height: 10px;
   font-size: 10px;
   color: #808080;
+}
+.preview__more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px 32px;
+}
+@media only screen and (max-width: 600px) {
+  .preview__more {
+    padding: 4px 24px 24px;
+  }
+}
+.preview__more .button {
+  margin: 0 auto;
 }
 .reviews {
   text-align: center;

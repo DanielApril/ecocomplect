@@ -212,12 +212,24 @@
 	justify-content center
 	padding 16px 24px 8px
 
+	+media(tablet-sm mobile)
+		padding 16px 16px 8px
+
+		.props__item
+			flex-grow 1
+
+			&:first-child
+				padding-left 0
+
+			&:last-child
+				padding-right 0
+
 .preview__about
-	padding 8px 24px 32px
+	padding 8px 24px
 
 	+media(mobile)
 		flex-direction column
-		padding 4px 16px 4px
+		padding 4px 16px
 
 .preview__about-left
 .preview__about-right
@@ -227,7 +239,7 @@
 		margin-right auto
 		margin-bottom 24px
 		margin-left auto
-		max-width 300px
+		max-width 320px
 		width 100%
 
 .preview__about-left
@@ -253,6 +265,18 @@
 	line-height 10px
 	font-size 10px
 	color $cl-grey-3
+
+.preview__more
+	display flex
+	justify-content center
+	align-items center
+	padding 8px 24px 32px
+
+	+media(mobile)
+		padding 4px 24px 24px
+
+	.button
+		margin 0 auto
 
 .reviews
 	text-align center
