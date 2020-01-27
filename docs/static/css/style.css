@@ -6067,6 +6067,11 @@ sup {
     min-width: 80px;
   }
 }
+@media only screen and (max-width: 340px) {
+  .props__item {
+    min-width: auto;
+  }
+}
 .props__item._title {
   flex-shrink: 0;
   max-width: 300px;
@@ -6096,6 +6101,11 @@ sup {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .props__value {
     line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .props__value {
+    font-size: 20px;
   }
 }
 .props__desc {
