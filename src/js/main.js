@@ -171,7 +171,7 @@ $(document).ready(function () {
 	$('a').click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top;
-		$('html').animate({ scrollTop: destination }, 1100);
+		$('body').animate({ scrollTop: destination }, 1100);
 		return false;
 	});
 
@@ -181,7 +181,7 @@ $(document).ready(function () {
 		var target = $(this).attr('data-target');
 		$(target).slideDown(900).addClass('_active');
 		var destination = $(target).offset().top - headerHeight;
-		$('html').animate({ scrollTop: destination }, 1000);
+		$('body').animate({ scrollTop: destination }, 1000);
 		return false;
 	});
 
