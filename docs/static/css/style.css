@@ -5778,6 +5778,11 @@ p {
     font-size: 16px;
   }
 }
+@media only screen and (max-width: 600px) and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 600px) and (max-width: 340px) {
+  .fz-lg {
+    font-size: 14px;
+  }
+}
 ul._dash li {
   display: block;
 }
@@ -6606,6 +6611,21 @@ body.no-scroll {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section._slider {
     margin-bottom: 40px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .section._index-desc ._img {
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px) {
+  .section._index-desc ._img {
+    height: 200px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .section._index-desc ._img {
+    height: 160px;
   }
 }
 .new-project {
