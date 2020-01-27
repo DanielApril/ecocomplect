@@ -176,4 +176,22 @@ $(document).ready(function () {
 	});
 
 
+	const headerHeight = 60;
+	$('[data-type="open"]').on('click', function() {
+		var target = $(this).attr('data-target');
+		$(target).slideDown(900).addClass('_active');
+		var destination = $(target).offset().top - headerHeight;
+		$('html').animate({ scrollTop: destination }, 1000);
+		return false;
+	});
+
+	$('[data-type="close"]').on('click', function() {
+		var target = $(this).parents('.section');
+		$(target).slideUp(1000).removeClass('_active');
+	});
+
+
+
+
+
 });

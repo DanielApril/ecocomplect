@@ -111,6 +111,13 @@ body
 			+media(tablet-sm mobile)
 				min-height auto
 
+	&._more
+		display none
+		opacity 0
+		transition .3s opacity
+
+		&._active
+			opacity 1
 
 .section__half
 	display flex
@@ -186,6 +193,7 @@ body
 	padding 80px 0
 	max-width 80%
 	min-width 465px
+	width 100%
 
 	+media(tablet mobile)
 		min-width auto

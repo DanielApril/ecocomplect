@@ -3255,6 +3255,11 @@ button.swiper-pagination-bullet {
   border-width: 2px;
   border-style: solid;
   border-color: transparent;
+  opacity: 0.85;
+  transition: 0.2s opacity;
+}
+.button:hover {
+  opacity: 1;
 }
 .button._outline {
   border-color: #424242;
@@ -3292,6 +3297,10 @@ button.swiper-pagination-bullet {
     min-width: 140px;
     letter-spacing: 0.02em;
   }
+}
+.button i {
+  margin-right: 1em;
+  font-size: 14px;
 }
 .flex {
   display: flex;
@@ -6262,6 +6271,14 @@ body.no-scroll {
     min-height: auto;
   }
 }
+.section._more {
+  display: none;
+  opacity: 0;
+  transition: 0.3s opacity;
+}
+.section._more._active {
+  opacity: 1;
+}
 .section__half {
   display: flex;
   justify-content: center;
@@ -6344,6 +6361,7 @@ body.no-scroll {
   padding: 80px 0;
   max-width: 80%;
   min-width: 465px;
+  width: 100%;
 }
 @media only screen and (min-width: 601px) and (max-width: 1200px), only screen and (max-width: 600px) {
   .section__half-inner {
