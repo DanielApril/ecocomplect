@@ -143,6 +143,7 @@ $(document).ready(function () {
 	});
 
 
+	// Mobile menu
 	var mobileMenu = $('.mobile-menu');
 	var mobileMenuOpen = $('.header__menu-button');
 	var mobileMenuClose = $('.mobile-menu__close');
@@ -167,6 +168,8 @@ $(document).ready(function () {
 		body.removeClass('no-scroll');
 	});
 
+	
+	// "More" button function
 	const headerHeight = 60;
 	$('a').click(function () {
 		var elementClick = $(this).attr("href");
@@ -197,7 +200,26 @@ $(document).ready(function () {
 	});
 
 
+	// Scroll scale down images
+	var scaleDown = 1;
+	$(window).on('scroll', function() {
+		var offset = $('#tech').offset().top;
+		scaleDown ++;
+
+		// console.log($(window).scrollTop());
+		
+		
+		$('._anim').css(
+			{
+				"transform": "translateX("+scaleDown+")"
+			}
+		);
+	});
 
 
+	// Social cointer
+	$('.social__amount').counterUp({
+		time: 1000
+	});
 
 });

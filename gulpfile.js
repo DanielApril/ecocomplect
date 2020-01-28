@@ -84,6 +84,8 @@ gulp.task('script:dev', function () {
 			//  './node_modules/jquery/dist/jquery.min.js',
 			//  './node_modules/swiper/js/swiper.min.js',
 			//  './node_modules/jquery/dist/jquery.min.js',
+			config.devFolder + '/js/waypoint.js',
+			config.devFolder + '/js/counterup.js',
 			config.devFolder + '/js/main.js'
 		])
 		.pipe(plumber())
@@ -112,6 +114,8 @@ gulp.task('script:build', function () {
 			//  './node_modules/jquery/dist/jquery.min.js',
 			//  './node_modules/swiper/js/swiper.min.js',
 			//  './node_modules/jquery/dist/jquery.min.js',
+			config.devFolder + '/js/waypoint.js',
+			config.devFolder + '/js/counterup.js',
 			config.devFolder + '/js/main.js'
 		])
 		.pipe(plumber())
