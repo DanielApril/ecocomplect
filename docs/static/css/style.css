@@ -7771,6 +7771,7 @@ body.no-scroll {
   }
 }
 .review__img {
+  display: flex;
   flex-grow: 1;
   color: #fff;
   background: linear-gradient(180deg, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.8) 92.97%);
