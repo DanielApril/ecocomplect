@@ -219,6 +219,7 @@ $(document).ready(function () {
 
 	// Social cointer
 	$('.social__amount').counterUp({
+		delay: 10,
 		time: 1000
 	});
 
