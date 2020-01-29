@@ -6756,7 +6756,7 @@ sup {
   box-shadow: 0 1px 4px 0 rgba(34,34,34,0.25);
   overflow-y: auto;
   transform: translateX(100%);
-  transition: transform 0.2s;
+  transition: transform 0.4s;
   z-index: 50;
 }
 .mobile-menu._visible {
