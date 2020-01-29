@@ -261,7 +261,8 @@ $(document).ready(function () {
 
 	
 	// "More" button function
-	const headerHeight = 60;
+	// const headerHeight = 60;
+	const headerHeight = 0;
 	$('a').click(function () {
 		var elementClick = $(this).attr("href");
 		var destination = $(elementClick).offset().top - headerHeight;
