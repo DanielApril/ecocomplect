@@ -7065,7 +7065,11 @@ body.no-scroll {
   top: 0;
   right: 0;
   left: 0;
+  transition: 0.4s top;
   z-index: 10;
+}
+.header.nav-up {
+  top: -60px;
 }
 .header__inner {
   display: flex;
