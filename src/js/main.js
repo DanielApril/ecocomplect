@@ -182,8 +182,10 @@ $(document).ready(function () {
 		return false;
 	});
 
+	var sourceButton;
 	$('[data-type="open"]').on('click', function() {
 		var target = $(this).attr('data-target');
+		sourceButton = $(this);
 		$(target).slideDown(900).addClass('_active');
 		var destination = $(target).offset().top - headerHeight;
 		if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
@@ -191,12 +193,14 @@ $(document).ready(function () {
 		} else {
 			$('html').animate({ scrollTop: destination }, 1000);
 		}
+		$(this).addClass('_disabled');
 		return false;
 	});
 
 	$('[data-type="close"]').on('click', function() {
 		var target = $(this).parents('.section');
 		$(target).slideUp(1000).removeClass('_active');
+		sourceButton.removeClass('_disabled');
 	});
 
 

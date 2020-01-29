@@ -4172,6 +4172,10 @@ body.compensate-for-scrollbar {
 .button._fluid {
   width: 100%;
 }
+.button._disabled {
+  opacity: 0.1;
+  pointer-events: none;
+}
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .button {
     height: 40px;
@@ -6836,6 +6840,11 @@ sup {
 .swiper-container {
   min-height: 320px;
 }
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .swiper-container {
+    min-height: 240px;
+  }
+}
 .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
   margin: 0 32px 0 0;
 }
@@ -6887,6 +6896,11 @@ sup {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .fullpage-slider {
     height: 400px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .fullpage-slider {
+    height: 240px;
   }
 }
 .fullpage-slide {
