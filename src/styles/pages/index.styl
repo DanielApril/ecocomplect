@@ -72,6 +72,30 @@
 	&._reviews
 		padding 40px 0
 
+	&._review
+		&._alt
+			position relative
+			@extend $style-bg-cover
+			min-height 400px
+
+			.review__content
+				position relative
+				margin auto 80px 80px
+				text-align right
+				z-index 1
+
+				+media(tablet-sm mobile)
+					margin 40px 0
+					padding 0 20px
+			
+			.section__title
+				margin-bottom 24px
+				text-align right
+
+			+media(mobile)
+				min-height auto
+
+
 	&._showroom
 		+media(tablet-sm mobile)
 			margin-top 40px
