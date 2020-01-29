@@ -106,6 +106,15 @@
 				height 160px
 
 .new-project-slider
+	+media(mobile)
+		min-height 0 !important
+
+	+media(mobile-lg)
+		height 240px
+
+	+media(mobile-md mobile-sm)
+		height 200px
+
 	.swiper-slide
 		@extend $style-dummy
 

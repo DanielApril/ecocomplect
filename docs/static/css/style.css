@@ -7541,6 +7541,21 @@ body.no-scroll {
     height: 160px;
   }
 }
+@media only screen and (max-width: 600px) {
+  .new-project-slider {
+    min-height: 0 !important;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .new-project-slider {
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .new-project-slider {
+    height: 200px;
+  }
+}
 .new-project {
   display: flex;
   justify-content: center;
