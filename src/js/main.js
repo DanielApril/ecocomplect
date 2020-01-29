@@ -210,15 +210,12 @@ $(document).ready(function () {
 	$(window).on('scroll', function() {
 		var offset = $('#tech').offset().top;
 		scaleDown ++;
-
 		// console.log($(window).scrollTop());
-		
-		
-		$('._anim').css(
-			{
-				"transform": "translateX("+scaleDown+")"
-			}
-		);
+		// $('img._anim').css(
+		// 	{
+		// 		"transform": "translateX("+scaleDown+"px)"
+		// 	}
+		// );
 	});
 
 

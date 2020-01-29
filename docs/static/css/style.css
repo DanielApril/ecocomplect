@@ -7209,6 +7209,16 @@ body.no-scroll {
     overflow: hidden;
   }
 }
+@media only screen and (min-width: 401px) and (max-width: 600px), only screen and (min-width: 341px) and (max-width: 400px) {
+  .section__half._img {
+    max-height: 240px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .section__half._img {
+    max-height: 200px;
+  }
+}
 .section__half._slider {
   align-items: stretch;
   padding: 0;
