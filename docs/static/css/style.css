@@ -4187,6 +4187,9 @@ body.compensate-for-scrollbar {
 .flex {
   display: flex;
 }
+.flex > * {
+  min-width: 0;
+}
 .flex:not(._vertical)._center:not(._top):not(._bottom) {
   align-items: center;
 }
