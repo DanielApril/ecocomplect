@@ -1,0 +1,8 @@
+.form#form
+	h2.form__title Обсудим ваш проект?
+
+	form.form__content(autocomplete="on", method="post")
+		input(type="text", name="name", autocomplete="name", id="name-field", placeholder="Имя", required)
+		input(type="tel", name="phone", autocomplete="phone", id="phone-field", placeholder="Телефон", required)
+		input(type="email", name="email", autocomplete="email", id="email-field", placeholder="Email")
+		button.button._white.form__button(type="submit") Отправить

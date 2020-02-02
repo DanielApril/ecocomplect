@@ -285,13 +285,27 @@
 	color $cl-grey-3
 
 .form
+	display none
+	width 600px
+	color $cl-white
+	background $cl-grey-2
+
+.form__title
+	margin-bottom 40px
+	text-align center
+	line-height 1
+	font-size 24px
+
+	+media(mobile-md mobile-sm)
+		font-size 20px
+
+.form__content
 	display flex
 	flex-direction column
 	justify-content flex-start
 	align-items center
 	margin auto
-	padding 80px 20px
-	max-width 580px
+	max-width 400px
 	width 100%
 
 	input
@@ -299,7 +313,7 @@
 			margin-bottom 52px
 
 .form__button
-	margin-top 60px
+	margin-top 24px
 
 input
 	&[type="text"]

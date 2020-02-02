@@ -205,20 +205,6 @@ $(document).ready(function () {
 	});
 
 
-	// Scroll scale down images
-	var scaleDown = 1;
-	$(window).on('scroll', function() {
-		var offset = $('#tech').offset().top;
-		scaleDown ++;
-		// console.log($(window).scrollTop());
-		// $('img._anim').css(
-		// 	{
-		// 		"transform": "translateX("+scaleDown+"px)"
-		// 	}
-		// );
-	});
-
-
 	// Social cointer
 	$('.social__amount').counterUp({
 		delay: 10,
@@ -266,5 +252,7 @@ $(document).ready(function () {
 
 		lastScrollTop = st;
 	}
+
+	
 
 });

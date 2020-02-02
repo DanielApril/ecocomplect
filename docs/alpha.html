@@ -114,13 +114,13 @@
             <div class="swiper-container fullpage-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="flex _center">Slide 1</div>
+                  <div class="fullpage-slide"><img src="./static/img/6jyxOTJhVX0.jpg"></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="flex _center">Slide 2</div>
+                  <div class="fullpage-slide"><img src="./static/img/img-4.jpg"></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="flex _center">Slide 3</div>
+                  <div class="fullpage-slide"><img src="./static/img/6jyxOTJhVX0.jpg"></div>
                 </div>
               </div>
               <div class="swiper-button-prev"><i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -133,7 +133,7 @@
       </section>
       <section class="section">
         <div class="container _fluid _clean">
-          <div class="section__half _img"></div>
+          <div class="section__half _img"><img src="./static/img/6jyxOTJhVX0.jpg"></div>
           <div class="section__half">
             <div class="section__half-inner">
               <h2 class="section__title">Цена домокомплекта</h2>
@@ -154,12 +154,12 @@
                   <p class="pricelist__desc">Правильная сборка вашего будущего дома</p>
                 </li>
               </ul>
-              <button class="button _primary section__action" type="button">Оставить заявку</button>
+              <button class="button _primary section__action" type="button" data-fancybox data-src="#form">Оставить заявку</button>
             </div>
           </div>
         </div>
       </section>
-      <section class="section _light _lg">
+      <section class="section _light">
         <div class="container _fluid _clean">
           <div class="interior">
             <h2 class="section__title mb5x">Отделка</h2>
@@ -171,25 +171,25 @@
             <div class="swiper-container interior-slider">
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="interior__slide"><img src="" alt=""></div>
+                  <div class="interior__slide"><img src="./static/img/PtMdlb5L3I4.jpg" alt=""></div>
                 </div>
               </div>
               <div class="swiper-button-prev"><i class="fa fa-angle-left" aria-hidden="true"></i>
@@ -198,7 +198,7 @@
               </div>
             </div>
             <div class="flex _center">
-              <button class="button _primary section__action" type="button">Оставить заявку</button>
+              <button class="button _primary section__action" type="button" data-fancybox data-src="#form">Оставить заявку</button>
             </div>
           </div>
         </div>
@@ -211,21 +211,15 @@
           </div>
         </div>
       </section>
-      <section class="section _dark _lg">
-        <div class="container">
-          <div class="row">
-            <div class="col-8 _left-d-2">
-              <h2 class="section__title">Обсудим ваш проект?</h2>
-              <form class="form" autocomplete="on" method="post">
-                <input type="text" name="name" autocomplete="name" id="name-field" placeholder="Имя" required>
-                <input type="tel" name="phone" autocomplete="phone" id="phone-field" placeholder="Телефон" required>
-                <input type="email" name="email" autocomplete="email" id="email-field" placeholder="Email">
-                <button class="button _white form__button" type="submit">Отправить</button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div class="form" id="form">
+        <h2 class="form__title">Обсудим ваш проект?</h2>
+        <form class="form__content" autocomplete="on" method="post">
+          <input type="text" name="name" autocomplete="name" id="name-field" placeholder="Имя" required>
+          <input type="tel" name="phone" autocomplete="phone" id="phone-field" placeholder="Телефон" required>
+          <input type="email" name="email" autocomplete="email" id="email-field" placeholder="Email">
+          <button class="button _white form__button" type="submit">Отправить</button>
+        </form>
+      </div>
       <footer class="footer">
         <div class="container">
           <div class="footer__inner">

@@ -110,6 +110,11 @@
   background-size: cover;
   background-position: 50% 50%;
 }
+.interior__slide img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+}
 .nowrap {
   width: 100%;
   overflow-x: hidden;
@@ -136,8 +141,7 @@
   height: 100%;
   object-fit: contain;
 }
-.new-project-slider .swiper-slide,
-.interior__slide {
+.new-project-slider .swiper-slide {
   background: #3f20d7;
   background: linear-gradient(45deg, #3f20d7 0%, #dd4343 100%);
 }
@@ -7024,20 +7028,36 @@ sup {
   color: #808080;
 }
 .form {
+  display: none;
+  width: 600px;
+  color: #fff;
+  background: #424242;
+}
+.form__title {
+  margin-bottom: 40px;
+  text-align: center;
+  line-height: 1;
+  font-size: 24px;
+}
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .form__title {
+    font-size: 20px;
+  }
+}
+.form__content {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   margin: auto;
-  padding: 80px 20px;
-  max-width: 580px;
+  max-width: 400px;
   width: 100%;
 }
-.form input:not(:last-child) {
+.form__content input:not(:last-child) {
   margin-bottom: 52px;
 }
 .form__button {
-  margin-top: 60px;
+  margin-top: 24px;
 }
 input[type="text"],
 input[type="tel"],
@@ -7336,7 +7356,7 @@ body.no-scroll {
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .footer {
-    padding-bottom: 80px;
+    padding: 40px 0 80px;
   }
 }
 .footer__inner {
@@ -7956,14 +7976,29 @@ body.no-scroll {
     min-height: 200px;
   }
 }
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .plans {
+    padding: 32px 0;
+  }
+}
 .plans-slider {
   padding: 40px 0 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .plans-slider {
+    padding: 0;
+  }
 }
 .gallery {
   width: 100%;
 }
 .gallery .section__title {
   margin: 80px 0;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .gallery .section__title {
+    margin: 32px 0;
+  }
 }
 .pricelist {
   margin-top: 32px;
@@ -7996,18 +8031,33 @@ body.no-scroll {
   padding: 80px 0;
   width: 100%;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .interior {
+    padding: 40px 0;
+  }
+}
 .interior .section__action {
   margin: 0 auto;
 }
 .interior-slider {
   margin: 60px 0;
+  min-height: auto;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .interior-slider {
+    margin: 32px 0;
+  }
 }
 .interior__slide {
-  min-height: 350px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .interior__slide {
-    min-height: 200px;
+    height: 200px;
   }
 }
 .tour3d-section {
@@ -8023,9 +8073,18 @@ body.no-scroll {
   color: #fff;
   background-color: #424242;
   background-image: url("./../../static/img/tour3d-icon.svg");
+  background-size: 100px;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   border-radius: 160px;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .tour3d__icon {
+    margin: 40px auto 20px;
+    width: 100px;
+    height: 100px;
+    background-size: 60px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
