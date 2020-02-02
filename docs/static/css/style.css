@@ -7076,6 +7076,8 @@ input[type="email"] {
   background-color: transparent;
   border: 0;
   border-bottom: 1px solid #fff;
+  border-radius: 0;
+  -webkit-appearance: none;
 }
 body {
   overflow-x: hidden;
