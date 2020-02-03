@@ -7221,7 +7221,7 @@ body.no-scroll {
   .section__half {
     width: 100%;
     min-height: auto;
-    padding: 24px 20px 32px;
+    padding: 32px 20px 40px;
   }
 }
 .section__half._img {
@@ -7606,6 +7606,12 @@ body.no-scroll {
   .section._warm-house {
     margin-top: 32px;
     padding: 0 0 60px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .section._warm-house {
+    margin-top: 20px;
+    padding-bottom: 40px;
   }
 }
 .section._warm-house .video {
