@@ -253,6 +253,6 @@ $(document).ready(function () {
 		lastScrollTop = st;
 	}
 
-	
+	$.fancybox.defaults.autoFocus = "false";
 
 });
