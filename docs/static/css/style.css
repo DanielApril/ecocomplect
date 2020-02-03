@@ -6929,6 +6929,12 @@ sup {
     min-height: 240px;
   }
 }
+@media only screen and (max-width: 340px) {
+  .fullpage-slider {
+    height: 200px;
+    min-height: 200px;
+  }
+}
 .fullpage-slide {
   display: flex;
   justify-content: center;
