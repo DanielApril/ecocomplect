@@ -6906,6 +6906,11 @@ sup {
   width: 100%;
   height: 800px;
 }
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .fullpage-slider {
+    height: 640px;
+  }
+}
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .fullpage-slider {
     height: 400px;
@@ -6929,6 +6934,11 @@ sup {
   justify-content: center;
   align-items: center;
   margin-top: 160px;
+}
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .first-screen-props {
+    margin-top: 80px;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .first-screen-props {
@@ -7193,6 +7203,11 @@ body.no-scroll {
 .section._md .container {
   min-height: 600px;
 }
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .section._md .container {
+    min-height: 450px;
+  }
+}
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section._md .container {
     min-height: auto;
@@ -7200,6 +7215,11 @@ body.no-scroll {
 }
 .section._lg .container {
   min-height: 800px;
+}
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .section._lg .container {
+    min-height: 640px;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section._lg .container {
@@ -7299,9 +7319,14 @@ body.no-scroll {
 .section__desc + .section__desc {
   margin-top: 8px;
 }
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .section__desc {
+    line-height: 1.2;
+    font-size: 18px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .section__desc {
-    line-height: 1.3;
     font-size: 14px;
   }
 }
@@ -7331,6 +7356,11 @@ body.no-scroll {
   max-width: 1160px;
   width: 100%;
   min-height: 400px;
+}
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .container {
+    min-height: 300px;
+  }
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .container {
