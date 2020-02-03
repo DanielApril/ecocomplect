@@ -6675,7 +6675,7 @@ p {
 .cl-light {
   color: #808080;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 601px) and (max-width: 1200px) {
   .fz-lg {
     line-height: 1.2;
     font-size: 18px;
@@ -6912,7 +6912,7 @@ sup {
   width: 100%;
   height: 800px;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 901px) and (max-width: 1200px) {
   .fullpage-slider {
     height: 640px;
   }
@@ -6941,7 +6941,7 @@ sup {
   align-items: center;
   margin-top: 160px;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 901px) and (max-width: 1200px) {
   .first-screen-props {
     margin-top: 80px;
   }
@@ -7209,7 +7209,7 @@ body.no-scroll {
 .section._md .container {
   min-height: 600px;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 901px) and (max-width: 1200px) {
   .section._md .container {
     min-height: 450px;
   }
@@ -7222,7 +7222,7 @@ body.no-scroll {
 .section._lg .container {
   min-height: 800px;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 901px) and (max-width: 1200px) {
   .section._lg .container {
     min-height: 640px;
   }
@@ -7325,7 +7325,7 @@ body.no-scroll {
 .section__desc + .section__desc {
   margin-top: 8px;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 601px) and (max-width: 1200px) {
   .section__desc {
     line-height: 1.2;
     font-size: 18px;
@@ -7333,6 +7333,7 @@ body.no-scroll {
 }
 @media only screen and (max-width: 600px) {
   .section__desc {
+    line-height: 1.3;
     font-size: 14px;
   }
 }
@@ -7363,7 +7364,7 @@ body.no-scroll {
   width: 100%;
   min-height: 400px;
 }
-@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+@media only screen and (min-width: 1301px) and (max-width: 1600px), only screen and (min-width: 1201px) and (max-width: 1300px), only screen and (min-width: 901px) and (max-width: 1200px) {
   .container {
     min-height: 300px;
   }
