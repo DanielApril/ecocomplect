@@ -86,6 +86,7 @@
 	color $cl-white
 	transform translateY(-50%)
 	transition .2s background-color ease
+	opacity .5
 	z-index 5
 
 	&._light
@@ -94,6 +95,9 @@
 
 		&:hover
 			background-color $cl-grey-4
+
+	&.swiper-button-disabled
+		opacity .5
 
 	&:hover
 		background-color $cl-grey-2
@@ -172,11 +176,13 @@
 	width 100%
 	height 800px
 
-	+media(tablet-sm mobile)
+	+media(tablet-sm)
 		height 400px
+		min-height @height
 
-	+media(mobile-md mobile-sm)
+	+media(mobile)
 		height 240px
+		min-height @height
 
 .fullpage-slide
 	display flex
