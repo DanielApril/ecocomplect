@@ -5977,5 +5977,15 @@ $(document).ready(function () {
 	}
 
 	$.fancybox.defaults.autoFocus = false;
+	$.fancybox.defaults.i18n.en.CLOSE = "Закрыть";
+	$.fancybox.defaults.i18n.en.NEXT = "Дальше";
+	$.fancybox.defaults.i18n.en.PREV = "Назад";
+	$.fancybox.defaults.i18n.en.ERROR = "Ошибка";
+	$.fancybox.defaults.i18n.en.PLAY_START = "Начать слайдшоу";
+	$.fancybox.defaults.i18n.en.PLAY_STOP = "Остановить слайдшоу";
+	$.fancybox.defaults.i18n.en.FULL_SCREEN = "На весь экран";
+	$.fancybox.defaults.i18n.en.THUMBS = "Миниатюры";
+	$.fancybox.defaults.i18n.en.SHARE = "Поделиться";
+	$.fancybox.defaults.i18n.en.ZOOM = "Увеличить";
 
 });
