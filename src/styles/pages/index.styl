@@ -11,8 +11,8 @@
 			width 100%
 			height 100%
 
-			+media(tablet mobile)
-				height auto
+			// +media(tablet mobile)
+			// 	height auto
 
 		.social
 			&._in
@@ -28,10 +28,13 @@
 			text-decoration none
 			color $cl-grey-1
 
+			+media(mobile)
+				padding 12px
+
 		.social__icon
 			margin-bottom 4px
 
-			+media(mobile)
+			+media(tablet-sm mobile)
 				.fa
 					font-size 16px
 					color $cl-grey-3
@@ -39,7 +42,7 @@
 		.social__amount
 			@extend $text-h1
 
-			+media(mobile)
+			+media(tablet-sm mobile)
 				line-height 1.2
 				font-weight 500
 				font-size 20px
@@ -49,7 +52,7 @@
 			margin-top 6px
 			color $cl-grey-3
 
-			+media(mobile)
+			+media(tablet-sm mobile)
 				line-height 1
 				font-size 12px
 
@@ -57,6 +60,15 @@
 			+media(tablet mobile)
 				min-height auto
 				height 240px
+
+			+media(mobile-lg)
+				height 200px
+
+			+media(mobile-md)
+				height 160px
+
+			+media(mobile-sm)
+				height 120px
 
 	&._benefits
 		.benefit
