@@ -31,17 +31,27 @@
 		.social__icon
 			margin-bottom 4px
 
+			+media(mobile)
+				.fa
+					font-size 16px
+					color $cl-grey-3
+
 		.social__amount
 			@extend $text-h1
 
 			+media(mobile)
-				font-size 36px
 				line-height 1.2
+				font-weight 500
+				font-size 20px
 
 		.social__name
 			@extend $text-sm
 			margin-top 6px
 			color $cl-grey-3
+
+			+media(mobile)
+				line-height 1
+				font-size 12px
 
 		.container
 			+media(tablet mobile)
