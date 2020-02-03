@@ -6675,6 +6675,12 @@ p {
 .cl-light {
   color: #808080;
 }
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .fz-lg {
+    line-height: 1.2;
+    font-size: 18px;
+  }
+}
 @media only screen and (max-width: 600px) {
   .fz-lg {
     line-height: 1.3;
@@ -7624,7 +7630,7 @@ body.no-scroll {
 }
 .section._review._alt .review__content {
   position: relative;
-  margin: auto 80px 80px;
+  margin: auto 80px 80px auto;
   text-align: right;
   z-index: 1;
 }
@@ -7637,6 +7643,9 @@ body.no-scroll {
 .section._review._alt .section__title {
   margin-bottom: 24px;
   text-align: right;
+}
+.section._review._alt .section__desc {
+  max-width: 700px;
 }
 @media only screen and (max-width: 600px) {
   .section._review._alt {
@@ -7932,6 +7941,7 @@ body.no-scroll {
 .review__img {
   display: flex;
   flex-grow: 1;
+  overflow: hidden;
   color: #fff;
   background: linear-gradient(180deg, rgba(0,0,0,0.25) 50%, rgba(0,0,0,0.8) 92.97%);
 }
@@ -7963,7 +7973,7 @@ body.no-scroll {
   display: flex;
   position: relative;
   margin: 0 auto;
-  max-width: 400px;
+  max-width: 100%;
   width: 100%;
   height: 600px;
   background-color: #424242;

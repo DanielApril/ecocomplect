@@ -56,19 +56,14 @@ $(document).ready(function () {
 		breakpoints: {
 			300: {
 				slidesPerView: 1,
-				// slidesOffsetBefore: 20,
-				// slidesOffsetAfter: 20,
-			},
-			600: {
-				slidesPerView: 2,
 			},
 			900: {
 				slidesPerView: 2,
 			},
 			1200: {
 				slidesPerView: 3,
-				slidesOffsetBefore: 120,
-				slidesOffsetAfter: 120,
+				slidesOffsetBefore: slideGutter,
+				slidesOffsetAfter: slideGutter,
 			}
 		}
 	});
@@ -84,16 +79,14 @@ $(document).ready(function () {
 		breakpoints: {
 			300: {
 				slidesPerView: 1,
-				// slidesOffsetBefore: 48,
-				// slidesOffsetAfter: 48,
-			},
-			600: {
-				slidesPerView: 2,
 			},
 			900: {
+				slidesPerView: 2,
+			},
+			1200: {
 				slidesPerView: 3,
-				slidesOffsetBefore: 120,
-				slidesOffsetAfter: 120,
+				slidesOffsetBefore: slideGutter,
+				slidesOffsetAfter: slideGutter,
 			}
 		}
 	});
