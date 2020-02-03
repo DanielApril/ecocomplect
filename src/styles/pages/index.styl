@@ -25,6 +25,8 @@
 			align-items center
 			padding 32px
 			height 100%
+			text-decoration none
+			color $cl-grey-1
 
 		.social__icon
 			margin-bottom 4px
@@ -40,6 +42,11 @@
 			@extend $text-sm
 			margin-top 6px
 			color $cl-grey-3
+
+		.container
+			+media(tablet mobile)
+				min-height auto
+				height 240px
 
 	&._benefits
 		.benefit
