@@ -5976,6 +5976,6 @@ $(document).ready(function () {
 		lastScrollTop = st;
 	}
 
-	$.fancybox.defaults.autoFocus = "false";
+	$.fancybox.defaults.autoFocus = false;
 
 });
