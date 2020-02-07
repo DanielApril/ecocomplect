@@ -5846,14 +5846,8 @@ $(document).ready(function () {
 			300: {
 				slidesPerView: 1,
 			},
-			600: {
+			1000: {
 				slidesPerView: 2
-			},
-			900: {
-				slidesPerView: 3
-			},
-			1200: {
-				slidesPerView: 4
 			}
 		}
 	});

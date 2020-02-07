@@ -106,6 +106,7 @@
 .first-screen-slide,
 .section._review._alt,
 .creator-section,
+.construction,
 .tour3d-section {
   background-repeat: no-repeat;
   background-size: cover;
@@ -7427,6 +7428,7 @@ body.no-scroll {
   display: flex;
   align-items: stretch;
   margin-top: 80px;
+  font-size: 14px;
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .footer__legal {
@@ -7471,7 +7473,7 @@ body.no-scroll {
   }
 }
 .footer__list li {
-  text-transform: uppercase;
+  font-weight: 400;
 }
 .footer__list li:not(:last-child) {
   margin-bottom: 16px;
@@ -8059,22 +8061,21 @@ body.no-scroll {
     font-size: 14px;
   }
 }
+.specifications .section__title {
+  margin-top: 20px;
+}
 .plans {
-  padding: 80px 0;
+  padding: 60px 0;
   width: 100%;
 }
 .plans .plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 20px 100px;
-  min-height: 600px;
-}
-@media only screen and (min-width: 901px) and (max-width: 1200px) {
-  .plans .plan {
-    min-height: auto;
-  }
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .plans .plan {
-    min-height: auto;
     padding: 40px;
     min-height: 200px;
   }
@@ -8096,7 +8097,7 @@ body.no-scroll {
   width: 100%;
 }
 .gallery .section__title {
-  margin: 80px 0;
+  margin: 40px 0 32px;
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .gallery .section__title {
@@ -8130,6 +8131,60 @@ body.no-scroll {
   width: 100%;
   color: #808080;
 }
+.section._construction .row {
+  width: 100%;
+  height: 100%;
+}
+.construction {
+  position: relative;
+}
+.construction__inner {
+  position: relative;
+  display: flex;
+  padding: 24px 12px;
+  min-height: 200px;
+  height: 100%;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+.construction__title {
+  line-height: 1;
+  font-weight: 500;
+  font-size: 32px;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .construction__title {
+    font-size: 24px;
+  }
+}
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+  .construction__title {
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px) {
+  .construction__title {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 340px) {
+  .construction__title {
+    font-size: 16px;
+  }
+}
+.construction__action {
+  margin-top: 24px;
+  text-decoration: underline;
+  opacity: 1;
+  color: #fff;
+}
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .construction__action {
+    text-transform: none;
+  }
+}
 .interior {
   padding: 80px 0;
   width: 100%;
@@ -8152,10 +8207,10 @@ body.no-scroll {
   }
 }
 .interior__slide {
-  height: 300px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 300px;
   overflow: hidden;
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
