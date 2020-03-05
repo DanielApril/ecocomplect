@@ -7298,6 +7298,11 @@ body.no-scroll {
   width: 100%;
   min-height: 400px;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .section__half._slider .swiper-container {
+    max-height: 480px;
+  }
+}
 .section__half._map {
   align-items: stretch;
   padding: 0;
@@ -8112,6 +8117,11 @@ body.no-scroll {
 .section-price {
   margin-top: 20px;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+  .section-price .section__half._img {
+    display: none;
+  }
+}
 .pricelist {
   margin-top: 32px;
 }
@@ -8162,7 +8172,7 @@ body.no-scroll {
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .construction {
     flex-basis: auto;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     max-width: 540px;
     width: 100%;
     height: auto;
