@@ -4153,6 +4153,10 @@ body.compensate-for-scrollbar {
 .button._outline {
   border-color: #424242;
 }
+.button._outline._contrast {
+  color: #fff;
+  border-color: #fff;
+}
 .button._primary {
   color: #fff;
   background-color: #424242;
@@ -6891,7 +6895,10 @@ sup {
   height: 100%;
 }
 .first-screen-slider .swiper-pagination {
-  bottom: 140px;
+  bottom: 80px;
+}
+.first-screen-slider .section__action {
+  margin-top: 40px;
 }
 .first-screen-slide {
   display: flex;
@@ -7259,10 +7266,19 @@ body.no-scroll {
   width: 50%;
   min-height: 100%;
 }
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .section__half {
+    padding: 32px 60px 40px;
+  }
+}
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .section__half {
     width: 100%;
     min-height: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .section__half {
     padding: 32px 20px 40px;
   }
 }
@@ -7300,7 +7316,7 @@ body.no-scroll {
 }
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .section__half._slider .swiper-container {
-    max-height: 480px;
+    max-height: 400px;
   }
 }
 .section__half._map {
@@ -7414,9 +7430,19 @@ body.no-scroll {
   background-color: #222;
   color: #fff;
 }
-@media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
+@media only screen and (min-width: 601px) and (max-width: 900px) {
   .footer {
     padding: 60px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .footer {
+    padding: 60px 20px;
+  }
+}
+@media only screen and (min-width: 341px) and (max-width: 400px), only screen and (max-width: 340px) {
+  .footer {
+    padding: 60px 0px;
   }
 }
 .footer__inner {
@@ -7446,7 +7472,7 @@ body.no-scroll {
 @media only screen and (max-width: 600px) {
   .footer__legal {
     line-height: 1.2;
-    font-size: 12px;
+    font-size: 11px;
   }
 }
 .footer__title {
@@ -8071,6 +8097,11 @@ body.no-scroll {
     font-size: 14px;
   }
 }
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .specifications {
+    padding: 0 48px;
+  }
+}
 .specifications .section__title {
   margin-top: 20px;
 }
@@ -8173,7 +8204,6 @@ body.no-scroll {
   .construction {
     flex-basis: auto;
     margin-bottom: 8px;
-    max-width: 540px;
     width: 100%;
     height: auto;
   }

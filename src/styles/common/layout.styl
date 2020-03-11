@@ -142,9 +142,14 @@ body
 	width 50%
 	min-height 100%
 
+	+media(tablet-sm)
+		padding 32px 60px 40px
+
 	+media(tablet-sm mobile)
 		width 100%
 		min-height auto
+
+	+media(mobile)
 		padding 32px 20px 40px
 
 	&._img
@@ -177,7 +182,7 @@ body
 			min-height 400px
 
 			+media(tablet-sm)
-				max-height 480px
+				max-height 400px
 
 	&._map
 		align-items stretch
@@ -272,8 +277,14 @@ body
 	background-color $cl-grey-1
 	color $cl-white
 
-	+media(tablet-sm mobile)
+	+media(tablet-sm)
 		padding 60px
+
+	+media(mobile)
+		padding 60px 20px
+
+	+media(mobile-md mobile-sm)
+		padding 60px 0px
 
 .footer__inner
 	display flex
@@ -297,7 +308,7 @@ body
 
 	+media(mobile)
 		line-height 1.2
-		font-size 12px
+		font-size 11px
 
 .footer__title
 	display block
