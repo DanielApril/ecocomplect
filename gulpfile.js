@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
 	pug = require('gulp-pug'),
+	prettify = require('gulp-html-prettify'),
 	stylus = require('gulp-stylus'),
 	tinypng = require('gulp-tinypng'),
 	plumber = require('gulp-plumber'),
@@ -17,7 +18,7 @@ var gulp = require('gulp'),
 var config = {
 	devFolder: './src',
 	buildFolder: './docs',
-	secondBuildFolder: '/static'
+	secondBuildFolder: '/assets'
 };
 
 
@@ -30,6 +31,7 @@ gulp.task('pug', function () {
 			pretty: true
 		}
 		))
+		.pipe(prettify({ indent_char: ' ', indent_size: 4 }))
 		.pipe(gulp.dest(config.buildFolder))
 		.on('end', browserSync.reload)
 });
@@ -149,7 +151,7 @@ gulp.task('img:dev', function () {
 gulp.task('img:build', function () {
 	return gulp
 		.src(config.devFolder + '/img/**/*.{jpg,gif,png,svg,ico}')
-		.pipe(tinypng('BKwyQB5YzfkoUueMTYI8gwRzRCZSfgKG'))
+		// .pipe(tinypng('BKwyQB5YzfkoUueMTYI8gwRzRCZSfgKG'))
 		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/img'));
 
 });

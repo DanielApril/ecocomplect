@@ -18,7 +18,9 @@
     "url": "https://github.com/DanielApril/ecocomplect/issues"
   },
   "homepage": "https://github.com/DanielApril/ecocomplect#readme",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-html-prettify": "0.0.1"
+  },
   "devDependencies": {
     "browser-sync": "^2.24.4",
     "cryptiles": "^4.1.3",
