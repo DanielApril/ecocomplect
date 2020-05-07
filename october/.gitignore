@@ -1,0 +1,15 @@
+.DS_Store
+*.log
+
+/bootstrap
+/cgi-bin
+/config
+/modules
+/plugins
+/storage
+/themes/demo
+/vendor
+
+artisan
+index.php
+.htaccess
