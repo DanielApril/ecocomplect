@@ -1,0 +1,6 @@
+plugin:
+    name: 'eco.projects::lang.plugin.name'
+    description: 'eco.projects::lang.plugin.description'
+    author: eco
+    icon: oc-icon-home
+    homepage: ''

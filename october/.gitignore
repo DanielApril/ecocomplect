@@ -5,7 +5,7 @@
 /cgi-bin
 /config
 /modules
-/plugins
+/plugins/!eco
 /storage
 /themes/demo
 /vendor
