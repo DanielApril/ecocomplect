@@ -45,7 +45,8 @@ gulp.task('style:dev', function () {
 		.pipe(plumber({ errorHandler: onError }))
 		.pipe(stylus({
 			// Libs include here - 'devFolder' +'/sylus/libs.styl'
-			'include css': true
+			'include css': true,
+			compress: false
 		}))
 		.pipe(autoprefixer({
 			// 3v for Flex-box
@@ -71,7 +72,7 @@ gulp.task('style:build', function () {
 		.pipe(autoprefixer({
 			browsers: ['last 3 version']
 		}))
-		.pipe(cssnano())
+		// .pipe(cssnano())
 		.pipe(gulp.dest(config.buildFolder + config.secondBuildFolder + '/css/'))
 });
 
