@@ -7722,6 +7722,7 @@ sup {
   padding: 12px;
   min-width: 120px;
   min-height: 60px;
+  text-align: center;
 }
 @media only screen and (min-width: 601px) and (max-width: 900px), only screen and (max-width: 600px) {
   .props__item {
