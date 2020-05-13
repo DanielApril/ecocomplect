@@ -11,7 +11,8 @@
   font-weight: 300;
   font-size: 32px;
 }
-.h3 {
+.h3,
+.specs__title {
   line-height: 32px;
   font-family: GothamPro, sans-serif;
   font-weight: 300;
@@ -43,6 +44,7 @@
 .fz-sm,
 .section._socials .social__name,
 .preview__desc,
+.specs__desc,
 .pricelist__desc {
   line-height: 20px;
   font-size: 14px;
@@ -9008,6 +9010,9 @@ body.no-scroll {
     font-size: 14px;
   }
 }
+.specifications {
+  width: 100%;
+}
 @media only screen and (min-width: 601px) and (max-width: 900px) {
   .specifications {
     padding: 0 48px;
@@ -9015,6 +9020,12 @@ body.no-scroll {
 }
 .specifications .section__title {
   margin-top: 20px;
+}
+.specs__item + .specs__item {
+  margin-top: 16px;
+}
+.specs__desc {
+  color: #808080;
 }
 .plans {
   padding: 60px 0;

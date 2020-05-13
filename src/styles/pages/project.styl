@@ -1,11 +1,24 @@
 @require '../_vars'
 
 .specifications
+	width 100%
+
 	+media(tablet-sm)
 		padding 0 48px
 
 	.section__title
 		margin-top 20px
+
+.specs__item
+	& + .specs__item
+		margin-top 16px
+
+.specs__title
+	@extend $text-h3
+
+.specs__desc
+	@extend $text-sm
+	color $cl-grey-3
 
 .plans
 	padding 60px 0
