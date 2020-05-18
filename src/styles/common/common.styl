@@ -59,6 +59,16 @@
 				margin-top 12px
 				margin-left 0
 
+		.inner
+			display flex
+			position static
+			margin 8px 0 0 12px
+			padding 0 0 0 12px
+			box-shadow none
+			border-left 2px solid $cl-grey-4
+			transform none
+			background-color transparent
+
 		a
 			color $cl-black
 
@@ -274,6 +284,9 @@
 		flex-shrink 0
 		max-width 300px
 		padding-right 40px
+
+		&:only-child
+			padding-right 12px
 
 		+media(tablet-sm mobile)
 			line-height 1.3

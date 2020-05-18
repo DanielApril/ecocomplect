@@ -11,14 +11,7 @@ $(document).ready(function () {
 			el: '.swiper-pagination',
 			// clickable: true
 		},
-		breakpoints: {
-			300: {
-				simulateTouch: true
-			},
-			1024: {
-				simulateTouch: false
-			}
-		},
+		simulateTouch: false
 	});
 
 
