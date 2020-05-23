@@ -68,6 +68,7 @@ body
 	flex-shrink 0
 	margin 0 auto
 	padding 0 20px
+	color $cl-white
 
 	ul
 		display flex
@@ -80,6 +81,7 @@ body
 			margin-left 20px
 
 	a
+	span
 		@extend $text-navitem
 		text-decoration none
 		text-transform uppercase
@@ -109,6 +111,7 @@ body
 
 		li + li
 			margin-left 0
+
 
 .header__phone
 	margin-left auto
@@ -373,6 +376,10 @@ body
 		@extend $text-navitem
 		font-weight 400
 
+		&.active
+			a
+				text-decoration underline
+
 		&:not(:last-child)
 			margin-bottom 16px
 
@@ -427,7 +434,7 @@ body
 
 	a
 		color $cl-grey-3
-	
+
 	+media(tablet-sm mobile)
 		margin-top 32px
 		margin-left 0

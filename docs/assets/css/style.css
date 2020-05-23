@@ -1,30 +1,35 @@
 .h1,
+.ck-wrapper h1,
 .section._socials .social__amount {
   line-height: 52px;
   font-family: GothamPro, sans-serif;
   font-weight: 300;
   font-size: 44px;
 }
-.h2 {
+.h2,
+.ck-wrapper h2 {
   line-height: 44px;
   font-family: GothamPro, sans-serif;
   font-weight: 300;
   font-size: 32px;
 }
 .h3,
+.ck-wrapper h3,
 .specs__title {
   line-height: 32px;
   font-family: GothamPro, sans-serif;
   font-weight: 300;
   font-size: 24px;
 }
-.h4 {
+.h4,
+.ck-wrapper h4 {
   line-height: 28px;
   font-family: GothamPro, sans-serif;
   font-weight: 300;
   font-size: 20px;
 }
 .h5,
+.ck-wrapper h6,
 .showroom__link,
 .pricelist__value {
   line-height: 24px;
@@ -58,7 +63,8 @@
   font-size: 10px;
 }
 .section__title,
-.props__item._title {
+.props__item._title,
+.project__version {
   line-height: 44px;
   font-family: GothamPro, sans-serif;
   font-weight: 500;
@@ -66,6 +72,7 @@
 }
 .navitem,
 .header__nav a,
+.header__nav span,
 .footer__list li,
 .pricelist__title {
   line-height: 16px;
@@ -144,10 +151,6 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-}
-.new-project-slider .swiper-slide {
-  background: #3f20d7;
-  background: linear-gradient(45deg, #3f20d7 0%, #dd4343 100%);
 }
 .backdrop,
 .page-backdrop {
@@ -6769,6 +6772,26 @@ sup {
   vertical-align: super;
   font-size: 0.6em;
 }
+.ck-wrapper h1,
+.ck-wrapper h2,
+.ck-wrapper h3,
+.ck-wrapper h4,
+.ck-wrapper h5,
+.ck-wrapper h6 {
+  margin-bottom: 0.8em;
+}
+.ck-wrapper b,
+.ck-wrapper strong {
+  font-weight: 600;
+}
+.ck-wrapper i,
+.ck-wrapper em {
+  font-style: italic;
+}
+.ck-wrapper ins,
+.ck-wrapper u {
+  text-decoration: underline;
+}
 * {
   box-sizing: border-box;
 }
@@ -6817,6 +6840,7 @@ sup {
 }
 .mobile-menu .header__nav {
   padding: 0;
+  color: $cl-text;
 }
 .mobile-menu .header__nav ul {
   flex-direction: column;
@@ -6829,14 +6853,15 @@ sup {
 .mobile-menu .header__nav .inner {
   display: flex;
   position: static;
-  margin: 8px 0 0 12px;
+  margin: 8px 0 0 24px;
   padding: 0 0 0 12px;
   box-shadow: none;
-  border-left: 2px solid #d6d6d6;
+  border-left: 1px solid #d6d6d6;
   transform: none;
   background-color: transparent;
 }
-.mobile-menu .header__nav a {
+.mobile-menu .header__nav a,
+.mobile-menu .header__nav span {
   color: #222;
 }
 @media only screen and (min-width: 601px) and (max-width: 1200px), only screen and (max-width: 600px) {
@@ -7238,6 +7263,7 @@ body.no-scroll {
   flex-shrink: 0;
   margin: 0 auto;
   padding: 0 20px;
+  color: #fff;
 }
 .header__nav ul {
   display: flex;
@@ -7249,13 +7275,15 @@ body.no-scroll {
 .header__nav li + li {
   margin-left: 20px;
 }
-.header__nav a {
+.header__nav a,
+.header__nav span {
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
   color: #fff;
 }
-.header__nav a:hover {
+.header__nav a:hover,
+.header__nav span:hover {
   text-decoration: underline;
 }
 .header__nav > ul > li:hover .inner {
@@ -7589,6 +7617,9 @@ body.no-scroll {
 }
 .footer__list li {
   font-weight: 400;
+}
+.footer__list li.active a {
+  text-decoration: underline;
 }
 .footer__list li:not(:last-child) {
   margin-bottom: 16px;
@@ -8185,6 +8216,28 @@ body.no-scroll {
     line-height: 1.2;
     font-size: 14px;
   }
+}
+.project__versions {
+  margin-top: 200px;
+  text-align: center;
+}
+.project__versions-title {
+  margin-bottom: 24px;
+}
+.project__versions-list {
+  display: flex;
+}
+.project__version {
+  display: flex;
+  padding: 12px 24px;
+  text-decoration: none;
+  color: #fff;
+}
+.project__version + .project__version {
+  border-left: 2px solid #faf7f7;
+}
+.project__version.active {
+  background-color: rgba(255,255,255,0.1);
 }
 .specifications {
   width: 100%;

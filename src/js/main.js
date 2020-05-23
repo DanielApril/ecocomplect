@@ -8,10 +8,12 @@ $(document).ready(function () {
 			prevEl: '.swiper-button-prev',
 		},
 		pagination: {
-			el: '.swiper-pagination',
-			// clickable: true
+			el: '.first-screen-slider .swiper-pagination',
+			clickable: true
 		},
-		simulateTouch: false
+		simulateTouch: false,
+		preloadImages: false,
+		lazy: true
 	});
 
 
@@ -19,10 +21,6 @@ $(document).ready(function () {
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
-		},
-		pagination: {
-			el: '.swiper-pagination',
-			clickable: true
 		},
 		spaceBetween: slideGutter,
 	});
@@ -148,7 +146,7 @@ $(document).ready(function () {
 		body.removeClass('no-scroll');
 	});
 
-	
+
 	// "More" button function
 	// const headerHeight = 60;
 	const headerHeight = 0;
@@ -186,10 +184,12 @@ $(document).ready(function () {
 
 
 	// Social cointer
-	$('.social__amount').counterUp({
-		delay: 10,
-		time: 1000
-	});
+	if ('.social__amount') {
+		$('.social__amount').counterUp({
+			delay: 10,
+			time: 1000
+		});
+	}
 
 
 

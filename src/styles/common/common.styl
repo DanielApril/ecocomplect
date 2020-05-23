@@ -49,6 +49,7 @@
 
 	.header__nav
 		padding 0
+		color $cl-text
 
 		ul
 			flex-direction column
@@ -62,14 +63,15 @@
 		.inner
 			display flex
 			position static
-			margin 8px 0 0 12px
+			margin 8px 0 0 24px
 			padding 0 0 0 12px
 			box-shadow none
-			border-left 2px solid $cl-grey-4
+			border-left 1px solid $cl-grey-4
 			transform none
 			background-color transparent
 
 		a
+		span
 			color $cl-black
 
 		+media(tablet mobile)

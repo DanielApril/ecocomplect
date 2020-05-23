@@ -1,5 +1,28 @@
 @require '../_vars'
 
+.project__versions
+	margin-top 200px
+	text-align center
+
+.project__versions-title
+	margin-bottom 24px
+
+.project__versions-list
+	display flex
+
+.project__version
+	display flex
+	padding 12px 24px
+	@extend $text-section-title
+	text-decoration none
+	color $cl-white
+
+	& + .project__version
+		border-left 2px solid $cl-grey-5
+
+	&.active
+		background-color rgba($cl-white,.1)
+
 .specifications
 	width 100%
 
