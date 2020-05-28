@@ -5736,7 +5736,9 @@ $(document).ready(function () {
 		},
 		simulateTouch: false,
 		preloadImages: false,
-		lazy: true
+		lazy: {
+			loadOnTransitionStart: true,
+		}
 	});
 
 
@@ -5746,6 +5748,10 @@ $(document).ready(function () {
 			prevEl: '.swiper-button-prev',
 		},
 		spaceBetween: slideGutter,
+		preloadImages: false,
+		lazy: {
+			loadOnTransitionStart: true,
+		}
 	});
 
 
@@ -5757,6 +5763,10 @@ $(document).ready(function () {
 		slidesPerView: 'auto',
 		spaceBetween: slideGutter,
 		centeredSlides: true,
+		preloadImages: false,
+		lazy: {
+			loadOnTransitionStart: true,
+		}
 	});
 
 
@@ -5821,6 +5831,10 @@ $(document).ready(function () {
 			1000: {
 				slidesPerView: 2
 			}
+		},
+		preloadImages: false,
+		lazy: {
+			loadOnTransitionStart: true,
 		}
 	});
 
@@ -5840,6 +5854,10 @@ $(document).ready(function () {
 			1000: {
 				slidesPerView: 2
 			}
+		},
+		preloadImages: false,
+		lazy: {
+			loadOnTransitionStart: true,
 		}
 	});
 
@@ -5912,7 +5930,7 @@ $(document).ready(function () {
 			delay: 10,
 			time: 1000
 		});
-	}
+	};
 
 
 

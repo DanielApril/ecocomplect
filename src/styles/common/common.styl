@@ -23,6 +23,9 @@
 	&._dark
 		opacity .75
 
+	+media(mobile)
+		opacity .75
+
 .page-backdrop
 	@extend $style-backdrop
 	position fixed
@@ -206,14 +209,28 @@
 		height 200px
 		min-height @height
 
-.fullpage-slide
-	display flex
-	justify-content center
-	align-items center
-	height 100%
+	.swiper-slide
+		display flex
+		justify-content center
+		align-items center
+		height 100%
 
-	img
-		@extend $style-img-cover
+		img
+			@extend $style-img-cover
+
+
+.swiper-slide
+	background-repeat no-repeat
+	background-position 50% 50%
+	background-size cover
+
+	& > a
+		width 100%
+		height 100%
+		background-repeat no-repeat
+		background-position 50% 50%
+		background-size cover
+
 
 .first-screen-props
 	display flex

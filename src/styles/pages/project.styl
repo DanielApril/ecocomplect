@@ -4,11 +4,23 @@
 	margin-top 200px
 	text-align center
 
+	+media(tablet-sm)
+		margin-top 150px
+
+	+media(mobile)
+		margin-top 100px
+
 .project__versions-title
 	margin-bottom 24px
 
+	+media(mobile)
+		margin-top 16px
+
 .project__versions-list
 	display flex
+
+	+media(mobile)
+		flex-direction column
 
 .project__version
 	display flex
@@ -20,8 +32,16 @@
 	& + .project__version
 		border-left 2px solid $cl-grey-5
 
+		+media(mobile)
+			border-left 0
+
 	&.active
 		background-color rgba($cl-white,.1)
+
+	+media(tablet-sm mobile)
+		padding 4px 12px
+		line-height 28px
+		font-size 20px
 
 .specifications
 	width 100%
@@ -51,14 +71,20 @@
 		display flex
 		justify-content center
 		align-items center
-		padding 20px 100px
+		padding 20px 40px
+		background-size contain
+		min-height 600px
 
 		img
 			@extend $style-img-contain
+			max-height 600px
+
+		+media(tablet-lg)
+			min-height 400px
 
 		+media(tablet-sm mobile)
 			padding 40px
-			min-height 200px
+			min-height 300px
 
 	+media(tablet-sm mobile)
 		padding 32px 0
@@ -193,19 +219,22 @@
 	display flex
 	justify-content center
 	align-items center
-	height 300px
+	min-height 500px
 	overflow hidden
 
 	img
 		@extend $style-bg-contain
 
+	+media(tablet-lg)
+		min-height 400px
+
 	+media(tablet-sm mobile)
-		height 200px
+		height 300px
 
 
 .tour3d-section
 	@extend $style-bg-cover
-	background-image url('./../../assets/img/tour3d.jpg')
+	background-image url('./../../assets/img/bg/tour3d-bg.jpg')
 
 .tour3d__icon
 	display flex
