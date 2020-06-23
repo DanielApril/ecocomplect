@@ -5974,6 +5974,8 @@ $(document).ready(function () {
 		lastScrollTop = st;
 	}
 
+
+	// Fancybox locale
 	$.fancybox.defaults.autoFocus = false;
 	$.fancybox.defaults.i18n.en.CLOSE = "Закрыть";
 	$.fancybox.defaults.i18n.en.NEXT = "Дальше";
