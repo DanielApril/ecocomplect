@@ -48,7 +48,7 @@
     "lodash.template": "^4.5.0",
     "natives": "^1.1.6",
     "request": "^2.88.0",
-    "swiper": "^5.2.1",
+    "swiper": "^6.5.1",
     "tough-cookie": "^2.5.0",
     "tunnel-agent": "^0.6.0"
   }
